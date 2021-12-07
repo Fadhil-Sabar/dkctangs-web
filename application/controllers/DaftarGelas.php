@@ -39,20 +39,66 @@ class DaftarGelas extends CI_Controller {
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
         if (empty($_FILES['sertifikat_vaksin']['name'])) {
         	$this->form_validation->set_rules('sertifikat_vaksin', 'Sertifikat Vaksin', 'required');
-        }
-
-        if ($this->form_validation->run() == false) {
-            redirect(base_url('Failed_GS'));
         } else {
             if ($this->input->post('TambahGS')) {
 
                 // setting upload img rules
-                $config['upload_path']          = 'peserta/images/gelas2021/sertifikat_vaksin/';
+                $config['upload_path']          = 'peserta/images/gelas2021/serifikat_vaksin';
                 $config['allowed_types']        = 'gif|jpg|png|jpeg';
                 $config['max_size']             = 2048;
                 // $config['max_width']            = 1024;
                 // $config['max_height']           = 768;
                 $config['encrypt_name']         = true;
+                $config['remove_spaces']        = true;
+
+                $this->upload->initialize($config);
+
+                if (!$this->upload->do_upload('surat_vaksin')) {
+                    $error = array('error' => $this->upload->display_errors());
+                    $this->load->view('daftar_gelas', $error);
+                } else {
+                    $data = array('image' => $this->upload->data());
+                }
+            }
+        }
+
+        if (empty($_FILES['surat_kesehatan']['name'])) {
+        	$this->form_validation->set_rules('surat_kesehatan', 'Surat Kesehatan', 'required');
+        } else {
+            if ($this->input->post('TambahGS')) {
+
+                // setting upload img rules
+                $config['upload_path']          = 'peserta/images/gelas2021/surat_kesehatan';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
+                $config['max_size']             = 2048;
+                // $config['max_width']            = 1024; $config
+                // ['max_height']           = 768;
+                $config['encrypt_name']         = false;
+                $config['remove_spaces']        = true;
+
+                $this->upload->initialize($config);
+
+                if (!$this->upload->do_upload('surat_kesehatan')) {
+                    $error = array('error' => $this->upload->display_errors());
+                    $this->load->view('daftar_gelas', $error);
+                } else {
+                    $data = array('image' => $this->upload->data());
+                }
+            }
+        }
+
+        if (empty($_FILES['surat_mandat']['name'])) {
+        	$this->form_validation->set_rules('surat_mandat', 'Surat Mandat', 'required');
+        } else {
+            if ($this->input->post('TambahGS')) {
+
+                // setting upload img rules
+                $config['upload_path']          = 'peserta/images/gelas2021/surat_mandat';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
+                $config['max_size']             = 2048;
+                // $config['max_width']            = 1024;
+                // $config['max_height']           = 768;
+                $config['encrypt_name']         = false;
                 $config['remove_spaces']        = true;
 
                 $this->upload->initialize($config);
@@ -63,8 +109,32 @@ class DaftarGelas extends CI_Controller {
                     $this->load->view('daftar_gelas', $error);
                 } else {
                     $data = array('image' => $this->upload->data());
-                    $this->session->set_flashdata('msg', 'Data Anda berhasil di tambahkan!');
+                }
+            }
+        }
 
+        if ($this->form_validation->run() == false) {
+            redirect(base_url('Failed_GS'));
+        } else {
+            if ($this->input->post('TambahGS')) {
+
+                // setting upload img rules
+                $config['upload_path']          = 'peserta/images/gelas2021/sertifikat_vaksin';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
+                $config['max_size']             = 2048;
+                // $config['max_width']            = 1024;
+                // $config['max_height']           = 768;
+                $config['encrypt_name']         = false;
+                $config['remove_spaces']        = true;
+
+                $this->upload->initialize($config);
+
+                if (!$this->upload->do_upload('sertifikat_vaksin')) {
+                    $error = array('error' => $this->upload->display_errors());
+
+                    $this->load->view('daftar_gelas', $error);
+                } else {
+                    $data = array('image' => $this->upload->data());
                  	$current_id = $this->gs->tambah_data_gelas($this->upload->data('file_name'));
                     redirect(base_url('Success_GS/'.$current_id));	
                 }

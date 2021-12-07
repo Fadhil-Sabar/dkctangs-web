@@ -3101,7 +3101,7 @@ h6 {
     position: absolute; }
 
   .header_area .navbar {
-    background: #868686; }
+    background: #002347; }
 
   .navbar-toggler[aria-expanded="false"] span:nth-child(2) {
     opacity: 1; }
@@ -3426,7 +3426,7 @@ h6 {
     .footer-area .footer-bottom a {
       color: #fdc632; }
     .footer-area .footer-bottom .footer-social {
-      text-align: right; }
+      text-align: left; }
       .footer-area .footer-bottom .footer-social a {
         background: #334f6c;
         width: 20px;

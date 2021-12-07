@@ -7,8 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="icon" href="<?=base_url()?>/assets/img/favicon.png" type="image/png" />
-    <title>Edustage Education</title>
+    <link rel="icon" href="<?=base_url()?>/assets/img/icon.png" type="image/png" />
+    <title>DKC Tangerang Selatan</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?=base_url()?>assets/css/flaticon.css" />
@@ -50,7 +50,10 @@
             >
               <ul class="nav navbar-nav menu_nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="<?= base_url('Home') ?>"><i class="fas fa-home text-white"></i></a>
+                  <a href="<?= base_url('Daftar_PWC') ?>" class="text-white nav-link" style="font-size: 30px;">#PWC3TANGSEL</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?= base_url('Home') ?>"><i class="fas fa-home text-white"></i> <b>Beranda</b></a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="<?= base_url('Daftar') ?>">Daftar</a>
@@ -104,7 +107,7 @@
                   </ul>
                 </li> -->
                 <li class="nav-item">
-                  <a class="nav-link" href="<?= base_url('Kontak') ?>"><i class="fas fa-phone text-white"></i></a>
+                  <a class="nav-link" href="<?= base_url('Kontak') ?>"><i class="fas fa-phone text-white"></i><b> Hubungi Kami</b></a>
                 </li>
                 <!-- <li class="nav-item">
                   <a href="#" class="nav-link search" id="search">
@@ -296,7 +299,7 @@
     <!--================ End Events Area =================-->
 
     <!--================ Start Popular Courses Area =================-->
-    <div class="popular_courses mt-5">
+    <div class="popular_courses mt-4">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-5">
@@ -313,9 +316,7 @@
               <div class="single_event position-relative">
                 <div class="event_thumb">
                   <!-- <img src="<?= base_url() ?>assets/img/banner-home-3.jpg" alt="" /> -->
-                  <div class="section_gap mb-3"></div>
                 </div>
-                <div class="section_gap mb-5"></div>
                 <div class="event_details">
                   <h5 class="text-white">Perkemahan Wirakarya Cabang (PWC)</h5>
                   <div class="d-flex mb-4">
@@ -331,8 +332,8 @@
                     </div>
                   </div>
                   <p>
-                    One make creepeth man for so bearing their firmament won't
-                    fowl meat over seas great
+                    Merupakan salah satu wadah kegiatan untuk mewujudkan tujuan
+                    membangun dan menguatkan semangat kebangsaan.
                   </p>
                   <a href="<?= base_url('Daftar_PWC') ?>" class="primary-btn rounded-0 mt-3">Daftar Sekarang</a>
                 </div>
@@ -341,10 +342,8 @@
             <div class="col-lg-4 col-md-4">
               <div class="single_event position-relative">
                 <div class="event_thumb">
-                  <!-- <img src="<?= base_url() ?>assets/img/event/e2.jpg" alt="" /> -->
-                  <div class="section_gap mb-3"></div>
+                  <img src="<?= base_url() ?>assets/img/banner/form-1.png" alt="" />
                 </div>
-                <div class="section_gap mb-5"></div> 
                 <div class="event_details">
                   <h5 class="text-white">Napak Tilas Dewan Kerja Cabang (DKC)</h5>
                   <div class="d-flex mb-4">
@@ -360,8 +359,8 @@
                     </div>
                   </div>
                   <p>
-                    One make creepeth man for so bearing their firmament won't
-                    fowl meat over seas great
+                    Dengan tujuan mengapresiasi budaya dan sejarah yang ada di kota tangerang selatan
+                    dimeriahkan dengan berbagai perlombaan.
                   </p>
                   <a href="<?= base_url('Daftar_NT') ?>" class="primary-btn rounded-0 mt-3">Daftar Sekarang</a>
                 </div>
@@ -371,9 +370,7 @@
               <div class="single_event position-relative">
                 <div class="event_thumb">
                   <!-- <img src="<?= base_url() ?>assets/img/event/e2.jpg" alt="" /> -->
-                  <div class="section_gap mb-3"></div>
                 </div>
-                <div class="section_gap mb-5"></div>
                 <div class="event_details">
                   <h5 class="text-white">Gelar Senja Dewan Kerja Cabang (DKC)</h5>
                   <div class="d-flex mb-4">
@@ -389,8 +386,8 @@
                     </div>
                   </div>
                   <p>
-                    One make creepeth man for so bearing their firmament won't
-                    fowl meat over seas great
+                    Kegiatan penurunan bendera pada waktu sore hari dan menampilkan beberapa
+                    kesenian, atraksi, dan penampilan lainnya.
                   </p>
                   <a href="<?= base_url('Daftar_GS') ?>" class="primary-btn rounded-0 mt-3">Daftar Sekarang</a>
                 </div>

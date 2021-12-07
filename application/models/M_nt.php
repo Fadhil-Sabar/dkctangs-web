@@ -15,7 +15,9 @@ class M_nt extends CI_Model
             'tanggal_lahir' => $this->input->post('tanggal_lahir',true),
             'penyakit' => $this->input->post('penyakit', true),
             'email' => $this->input->post('email', true),
-            'sertifikat_vaksin' => $filename
+            'sertifikat_vaksin' => $filename,
+            'surat_kesehatan' => $filename,
+            'surat_mandat' => $filename
         ];
 
         $this->db->insert('db_peserta_tatil', $data);

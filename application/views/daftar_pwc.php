@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="icon" href="<?= base_url() ?>assets/img/icon.png" type="image/png" />
-    <title>Elements</title>
+    <title>DKC Tangerang Selatan</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/flaticon.css" />
@@ -52,7 +52,10 @@
             >
               <ul class="nav navbar-nav menu_nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="<?= base_url('Home') ?>"><i class="fas fa-home text-white"></i></a>
+                  <a href="<?= base_url('Daftar_PWC') ?>" class="text-white nav-link" style="font-size: 30px;">#PWC3TANGSEL</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?= base_url('Home') ?>"><i class="fas fa-home text-white"></i> <b>Beranda</b></a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="<?= base_url('Daftar') ?>">Daftar</a>
@@ -106,7 +109,7 @@
                   </ul>
                 </li> -->
                 <li class="nav-item">
-                  <a class="nav-link" href="<?= base_url('Kontak') ?>"><i class="fas fa-phone text-white"></i></a>
+                  <a class="nav-link" href="<?= base_url('Kontak') ?>"><i class="fas fa-phone text-white"></i><b> Hubungi Kami</b></a>
                 </li>
                 <!-- <li class="nav-item">
                   <a href="#" class="nav-link search" id="search">
@@ -151,17 +154,19 @@
 						<h3 class="mb-30 title_color text-center">Form Pendaftaran<br>Perkemahan Wirakarya Cabang</h3>
 							<div class="container mb-3 ml-3">
 								<div class="row">
-									<div class="col-md-6 mt-2">
+<!-- 									<div class="col-md-6 mt-2">
 										<div class="row justify-content-center card alert-danger">
 												<div class="container mt-3 mx-3">
 													<div class="alert-danger">
 															<blockquote class="generic-blockquote row py-0 px-0 mr-3">
-																<div class="col-lg-2">
-																	<i class="fas fa-info-circle fa-4x text-info mt-2"></i>
-																</div>
-																<div class="col-lg-10">
-																	<h3 class="text-danger">PERHATIAN</h3>
-																	<h6 class="text-danger">Silahkan Download terlebih dahulu Petunjuk Teknis dan Petunjuk Pelaksanaan sebelum melakukan pendaftaran</h6>
+																<div class="container row">
+																	<div class="col-lg-2 text-center">
+																		<i class="fas fa-info-circle fa-4x text-info mt-2"></i>
+																	</div>
+																	<div class="col-lg-10 text-center">
+																		<h3 class="text-danger">PERHATIAN</h3>
+																		<h6 class="text-danger">Silahkan Download terlebih dahulu Petunjuk Teknis dan Petunjuk Pelaksanaan sebelum melakukan pendaftaran</h6>
+																	</div>
 																</div>
 															</blockquote>
 													</div>
@@ -171,134 +176,192 @@
 									<div class="col-md-6 row mt-2">
 											<div class="col-md-6 text-center">
 												<label> Petunjuk Pelaksanaan</label>
-												<a class="btn-block genric-btn primary-border circle e-large my-3 mx-2">Download</a>
+												<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">Download Juklak</a>
 											</div>
 											<div class="col-md-6 text-center">
 												<label> Petunjuk Teknis</label>
-												<a class="btn-block genric-btn primary-border circle e-large my-3 mx-2">Download</a>
+												<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">Download Juknis</a>
 											</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
-						<form action="<?= base_url()?>DaftarPWC/add_pwc" method="post"  enctype="multipart/form-data">
-								<div class="col-md-12">
-									<div class="form-group mt-10">
-										<input type="text" class="form-control" name="nama_lengkap" placeholder="Nama Lengkap"
-										 <?php if (form_error('nama_lengkap')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('nama_lengkap'); ?>">
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-group input-group-icon mt-10">
-										<div class="icon"><i class="ti-location-arrow" aria-hidden="true"></i></div>
-										<div class="form-select" id="default-select">
-											<select name="ranting" class="custom-select form-control">
-												<option selected disabled>Pilih Ranting</option>
-												<option value="Serpong Utara"<?= set_select('ranting', 'Serpong Utara') ?>>Serpong Utara</option>
-												<option value="Serpong"<?= set_select('ranting', 'Serpong') ?>>Serpong</option>
-												<option value="Setu"<?= set_select('ranting', 'Setu') ?>>Setu</option>
-												<option value="Pondok Aren"<?= set_select('ranting', 'Pondok Aren') ?>>Pondok Aren</option>
-												<option value="Pamulang"<?= set_select('ranting', 'Pamulang') ?>>Pamulang</option>
-												<option value="Ciputat"<?= set_select('ranting', 'Ciputat') ?>>Ciputat</option>
-												<option value="Ciputat Timur"<?= set_select('ranting', 'Ciputat Timur') ?>>Ciputat Timur</option>
-											</select>
+						<div class="row">
+							<div class="col-md-7">
+								<form action="<?= base_url()?>DaftarPWC/add_pwc" method="post"  enctype="multipart/form-data">
+										<div class="col-md-12">
+											<div class="form-group mt-10">
+												<input type="text" class="form-control" name="nama_lengkap" placeholder="Nama Lengkap" style="text-transform: uppercase;"
+												 <?php if (form_error('nama_lengkap')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('nama_lengkap'); ?>">
+											</div>
 										</div>
-									</div>
-								</div>
-								<div class="form-group col-md-12">
-									<div class="mt-10">
-										<input type="text" class="form-control" name="pangkalan" placeholder="Pangkalan"
-										 <?php if (form_error('pangkalan')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('pangkalan'); ?>">
-									</div>
-								</div>
-								<div class="form-group col-md-12">
-									<div class="input-group-icon mt-10">
-										<div class="icon"><i class="ti-location-arrow" aria-hidden="true"></i></div>
-										<div class="form-select" id="default-select">
-											<select name="jenis_kelamin" class="custom-select form-control">
-												<option selected disabled>Jenis Kelamin</option>
-												<option value="1"<?= set_select('jenis_kelamin', 1) ?>>Laki Laki</option>
-												<option value="2"<?= set_select('jenis_kelamin', 2) ?>>Perempuan</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="container">
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group">
-												<div class="mt-10">
-													<input type="text" class="form-control" name="tempat_lahir" placeholder="Tempat Lahir"
-													 <?php if (form_error('tempat_lahir')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('tempat_lahir'); ?>">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group input-group-icon mt-10">
+														<div class="icon"><i class="ti-location-arrow" aria-hidden="true"></i></div>
+														<div class="form-select" id="default-select">
+															<select name="ranting" class="custom-select form-control">
+																<option selected disabled>Pilih Ranting</option>
+																<option value="Serpong Utara"<?= set_select('ranting', 'Serpong Utara') ?>>SERPONG UTARA</option>
+																<option value="Serpong"<?= set_select('ranting', 'Serpong') ?>>SERPONG</option>
+																<option value="Setu"<?= set_select('ranting', 'Setu') ?>>SETU</option>
+																<option value="Pondok Aren"<?= set_select('ranting', 'Pondok Aren') ?>>PONDOK AREN</option>
+																<option value="Pamulang"<?= set_select('ranting', 'Pamulang') ?>>PAMULANG</option>
+																<option value="Ciputat"<?= set_select('ranting', 'Ciputat') ?>>CIPUTAT</option>
+																<option value="Ciputat Timur"<?= set_select('ranting', 'Ciputat Timur') ?>>CIPUTAT TIMUR</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="form-group col-md-6">
+													<div class="mt-10">
+														<input type="text" class="form-control" name="pangkalan" placeholder="Pangkalan" style="text-transform: uppercase;"
+														 <?php if (form_error('pangkalan')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('pangkalan'); ?>">
+													 <label><b class="text-danger">* </b>Silahkan isi dengan <b>ASAL SEKOLAH</b></label>
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-6">
-											<div class="form-group">
-												<div class="mt-10">
-													<input type="date" class="form-control" name="tanggal_lahir" placeholder="Tanggal Lahir"
-													 <?php if (form_error('tanggal_lahir')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('tanggal_lahir'); ?>">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<div class="mt-10">
+															<input type="text" class="form-control" name="tempat_lahir" placeholder="Tempat Lahir" style="text-transform: uppercase;" 
+															 <?php if (form_error('tempat_lahir')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('tempat_lahir'); ?>">
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<div class="mt-10">
+															<input type="date" class="form-control" name="tanggal_lahir" placeholder="Tanggal Lahir" style="text-transform: uppercase;" value="" min="1700-01-01" max="2100-12-31"
+															 <?php if (form_error('tanggal_lahir')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('tanggal_lahir'); ?>">
+													<label><b class="text-danger">* </b>Isi dengan format tanggal <b>BULAN/HARI/TAHUN</b></label>
+														</div>
+													</div>
+												</div>	
+											</div>
+										</div>
+										<div class="form-group col-md-6">
+											<div class="input-group-icon">
+												<div class="icon"><i class="ti-location-arrow" aria-hidden="true"></i></div>
+													<div class="form-select" id="default-select">
+														<select name="jenis_kelamin" class="custom-select form-control">
+															<option selected disabled>Jenis Kelamin</option>
+															<option value="1"<?= set_select('jenis_kelamin', 1) ?>>LAKI LAKI</option>
+															<option value="2"<?= set_select('jenis_kelamin', 2) ?>>PEREMPUAN</option>
+														</select>
+													</div>
+											</div>
+										</div>
+										<div class="container">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group mt-10">
+														<input type="number" class="form-control" name="no_hp" placeholder="Nomor Telepon" style="text-transform: uppercase;"
+														 <?php if (form_error('no_hp')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('no_hp'); ?>">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group mt-10">
+														<input type="email" class="form-control" name="email" placeholder="EMAIL"
+														 <?php if (form_error('email')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('email'); ?>">
+													</div>
 												</div>
 											</div>
-										</div>	
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-group mt-10">
-										<input type="number" class="form-control" name="no_hp" placeholder="Nomor Telepon"
-										 <?php if (form_error('no_hp')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('no_hp'); ?>">
-									</div>
-								</div>
-								<div class="form-group col-md-12">
-									<input type="email" class="form-control" name="email" placeholder="Masukkan Email Anda"
-									 <?php if (form_error('email')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('email'); ?>">
-								</div>
-								<div class="form-group col-md-12">
-									<input type="text" class="form-control" name="penyakit" placeholder="Penyakit Yang Pernah/Sedang Di Derita"
-									 <?php if (form_error('penyakit')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('penyakit'); ?>">
-								</div>
-              </div>
-              <div class="container">
-              	<div class="col-md-4">
-                                <div class="contain text-center pt-2">
-                                    <div>
-                                        <label>Upload Foto Dokter</label>
-                                        <div id="file-upload-form" class="uploader">
-                                            <input id="file-upload" type="file" name="sertifikat_vaksin" accept="image/*" />
-
-                                            <label for="file-upload" id="file-drag">
-                                                <img id="file-image" src="#" alt="Preview" class="hidden">
-                                                <div id="start">
-                                                    <i class="fa fa-download" aria-hidden="true"></i>
-                                                    <div>Pilih file atau tarik disini</div>
-                                                    <div id="notimage" class="hidden">Pilih gambar</div>
-                                                    <span id="file-upload-btn" class="btn btn-primary">Pilih file</span>
-                                                </div>
-                                                <div id="response" class="hidden">
-                                                    <div id="messages"></div>
-                                                </div><br>
-                                                <small>Hanya JPG, JPEG, PNG dan GIF yang diizinkan.</small><br>
-                                                <small>Ukuran maksimum 2 MB.</small>
-                                                <?php if (form_error('sertifikat_vaksin')) : ?>
-                                                    <div class="text-danger mt-2">
-                                                        <?= form_error('sertifikat_vaksin'); ?>
-                                                    </div>
-                                                <?php endif; ?>
-
-                                                <?php if (isset($error)) : ?>
-                                                    <div class="text-danger mt-2">
-                                                        <?= $error ?>
-                                                    </div>
-                                                <?php endif; ?>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-              	</div>
-              </div>
-							<div class="col-md-12 text-center">
-								<input class="genric-btn primary circle e-large mt-3" type="submit" value="Daftar" name="TambahPWC" style="font-size: 25px;"></input>
+										</div>
+										<div class="form-group col-md-12 mt-10">
+												<input type="text" class="form-control" name="penyakit" placeholder="Penyakit Yang Pernah/Sedang Di Derita" style="text-transform: uppercase;"
+												 <?php if (form_error('penyakit')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('penyakit'); ?>">
+												 <label><b class="text-danger">* </b>Silahkan isi <b>TIDAK ADA</b> jika tidak mempunyai riwayat penyakit</label>
+										</div>
 							</div>
-						</form>
+							<div class="col-md-5">
+								<img class="img-fluid col-lg-12 col-md-6" src="<?= base_url()?>assets/img/banner/form-3.png">
+							</div>
+			       </div>
+			       			<div class="row">
+		              	<div class="col-md-4">
+		                                <div class="contain text-center pt-2">
+		                                    <div>
+		                                        <label class="text-white"><b class="text-danger">* </b>Upload Sertifikat Vaksin</label>
+		                                        <div id="file-upload-form" class="uploader">
+		                                            <input id="file-upload" type="file" name="sertifikat_vaksin" accept="image/*" />
+
+		                                            <label for="file-upload" id="file-drag">
+		                                                <img id="file-image" src="#" alt="Preview" class="hidden">
+		                                                <div id="start">
+		                                                    <i class="fa fa-download" aria-hidden="true"></i>
+		                                                    <div>Pilih file atau tarik disini</div>
+		                                                    <div id="notimage" class="hidden">Pilih gambar</div>
+		                                                    <span id="file-upload-btn" class="btn btn-primary">Pilih file</span>
+		                                                </div>
+		                                                <div id="response" class="hidden">
+		                                                    <div id="messages"></div>
+		                                                </div><br>
+		                                                <small>Hanya JPG, JPEG, PNG dan GIF yang diizinkan.</small><br>
+		                                                <small>Ukuran maksimum 2 MB.</small>
+		                                                <?php if (form_error('sertifikat_vaksin')) : ?>
+		                                                    <div class="text-danger mt-2">
+		                                                        <?= form_error('sertifikat_vaksin'); ?>
+		                                                    </div>
+		                                                <?php endif; ?>
+
+		                                                <?php if (isset($error)) : ?>
+		                                                    <div class="text-danger mt-2">
+		                                                        <?= $error ?>
+		                                                    </div>
+		                                                <?php endif; ?>
+		                                            </label>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		              	</div>
+		              	<div class="col-md-4">
+		                                <div class="contain text-center pt-2">
+		                                    <div>
+		                                        <label class="text-white"><b class="text-danger">* </b>Upload Surat Kesehatan</label>
+		                                            <input id="file-upload" type="file" name="surat_kesehatan" accept="image/*"/>
+		                                            <?php if (form_error('sertifikat_vaksin')) : ?>
+		                                                    <div class="text-danger mt-2">
+		                                                        <?= form_error('sertifikat_vaksin'); ?>
+		                                                    </div>
+		                                                <?php endif; ?>
+
+		                                                <?php if (isset($error)) : ?>
+		                                                    <div class="text-danger mt-2">
+		                                                        <?= $error ?>
+		                                                    </div>
+		                                                <?php endif; ?>
+		                                        </div>
+		                                    </div>
+		              	</div>
+		              	<div class="col-md-4">
+		                                <div class="contain text-center pt-2">
+		                                    <div>
+		                                        <label class="text-white"><b class="text-danger">* </b>Upload Surat Mandat</label>
+		                                            <input id="file-upload" type="file" name="surat_mandat" accept="image/*" />
+		                                            <?php if (form_error('sertifikat_vaksin')) : ?>
+		                                                    <div class="text-danger mt-2">
+		                                                        <?= form_error('sertifikat_vaksin'); ?>
+		                                                    </div>
+		                                                <?php endif; ?>
+
+		                                                <?php if (isset($error)) : ?>
+		                                                    <div class="text-danger mt-2">
+		                                                        <?= $error ?>
+		                                                    </div>
+		                                                <?php endif; ?>
+		                                        </div>
+		                                    </div>
+		              	</div>
+		              </div>
+									<div class="col-md-12 text-center">
+										<input class="genric-btn primary circle e-large mt-3" type="submit" value="Daftar" name="TambahPWC" style="font-size: 25px;"></input>
+									</div>
+								</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -306,25 +369,23 @@
 	</div>
 	<!-- End Align Area -->
 
-	<!--================ Start footer Area  =================-->
+  <!--================ Start footer Area  =================-->
     <footer class="footer-area py-3">
       <div class="container">
         <div class="row">
-          <div class="mb-0 col-lg-12 text-center col-md-12 single-footer-widget">
-            <h4>Hubungi Kami</h4>
+          <div class="mb-0 col-lg-12 col-md-12 single-footer-widget">
+            <h4 class="mb-0 ml-5">Hubungi Kami</h4>
             <ul>
-              <li><i class="fas fa-phone mr-2"></i>0812-1234-1234</a></li>
-              <li><i class="fas fa-envelope mr-2"></i>dkctangsel@gmail.com</a></li>
+              <li class="mb-0 ml-1  "><a class="navbar-brand logo_h" href="<?= base_url('Home') ?>"><img class="logodkc" src="<?= base_url() ?>assets/img/logodkc.png" alt=""/></a></li>
+              <li class="mb-0 text-white ml-5"><i class="fas fa-envelope "></i> dkctangsel@gmail.com</a></li>
             </ul>
           </div>
         </div>
-        <div class="row footer-bottom d-flex justify-content-between mt-0">
-          <p class="col-lg-12 col-sm-12 footer-text text-center text-white">
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> Dewan Kerja Cabang 2021
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        <div class="row footer-bottom d-flex mt-0 ml-4">
+          <p class="ml-4 mb-0">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Digital Dawn Indonesia
           </p>
-          <div class="col-md-12 text-center footer-social">
+          <div class="ml-1 col-md-12 footer-social">
             <a href="#"><i class="fab fa-instagram-square"></i></a>
             <a href="#"><i class="fab fa-youtube-square"></i></a>
             <a href="#"><i class="fab fa-tiktok"></i></a>
@@ -332,7 +393,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Dewan
         </div>
       </div>
     </footer>
-		  <!--================ End footer Area  =================-->
+      <!--================ End footer Area  =================-->
+
 	  
 		  <!-- Optional JavaScript -->
 		  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
