@@ -1,31 +1,32 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class DaftarPWC extends CI_Controller {
+class DaftarPWC extends CI_Controller
+{
 
-	public function __construct()
-	{
-		parent::__construct();
-		$this->load->model('M_pwc','pwc');
-		$this->load->library('upload');
-		$this->load->library('form_validation');
-	}
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('M_pwc', 'pwc');
+        $this->load->library('upload');
+        $this->load->library('form_validation');
+    }
 
 
-// HALAMAN DAFTAR PWC 
-	public function daftar_pwc()
-	{
-		$this->load->view('daftar_pwc');
-	}
+    // HALAMAN DAFTAR PWC 
+    public function daftar_pwc()
+    {
+        $this->load->view('daftar_pwc');
+    }
 
-	// public function add()
-	// {
-	// 	$this->pwc->tambah_data_pwc();
-	// 	redirect('Home');
-	// }
+    // public function add()
+    // {
+    // 	$this->gs->tambah_data_gelas();
+    // 	redirect('Home');
+    // }
 
-	public function add_pwc()
-	{
+    public function add_pwc()
+    {
         $data['active'] = true;
         // set validation rules
         $this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required');
@@ -38,12 +39,12 @@ class DaftarPWC extends CI_Controller {
         $this->form_validation->set_rules('penyakit', 'Penyakit', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
         if (empty($_FILES['sertifikat_vaksin']['name'])) {
-        	$this->form_validation->set_rules('sertifikat_vaksin', 'Sertifikat Vaksin', 'required');
+            $this->form_validation->set_rules('sertifikat_vaksin', 'Sertifikat Vaksin', 'required');
         } else {
             if ($this->input->post('TambahPWC')) {
 
                 // setting upload img rules
-                $config['upload_path']          = 'peserta/images/pwc2021/serifikat_vaksin';
+                $config['upload_path']          = 'peserta/images/pwc2021/sertifikat_vaksin';
                 $config['allowed_types']        = 'gif|jpg|png|jpeg';
                 $config['max_size']             = 2048;
                 // $config['max_width']            = 1024;
@@ -53,7 +54,7 @@ class DaftarPWC extends CI_Controller {
 
                 $this->upload->initialize($config);
 
-                if (!$this->upload->do_upload('surat_vaksin')) {
+                if (!$this->upload->do_upload('sertifikat_vaksin')) {
                     $error = array('error' => $this->upload->display_errors());
                     $this->load->view('daftar_pwc', $error);
                 } else {
@@ -63,7 +64,7 @@ class DaftarPWC extends CI_Controller {
         }
 
         if (empty($_FILES['surat_kesehatan']['name'])) {
-        	$this->form_validation->set_rules('surat_kesehatan', 'Surat Kesehatan', 'required');
+            $this->form_validation->set_rules('surat_kesehatan', 'Surat Kesehatan', 'required');
         } else {
             if ($this->input->post('TambahPWC')) {
 
@@ -88,7 +89,7 @@ class DaftarPWC extends CI_Controller {
         }
 
         if (empty($_FILES['surat_mandat']['name'])) {
-        	$this->form_validation->set_rules('surat_mandat', 'Surat Mandat', 'required');
+            $this->form_validation->set_rules('surat_mandat', 'Surat Mandat', 'required');
         } else {
             if ($this->input->post('TambahPWC')) {
 
@@ -103,7 +104,7 @@ class DaftarPWC extends CI_Controller {
 
                 $this->upload->initialize($config);
 
-                if (!$this->upload->do_upload('sertifikat_vaksin')) {
+                if (!$this->upload->do_upload('surat_mandat')) {
                     $error = array('error' => $this->upload->display_errors());
 
                     $this->load->view('daftar_pwc', $error);
@@ -119,7 +120,7 @@ class DaftarPWC extends CI_Controller {
             if ($this->input->post('TambahPWC')) {
 
                 // setting upload img rules
-                $config['upload_path']          = 'peserta/images/pwc2021/sertifikat_vaksin';
+                $config['upload_path']          = 'peserta/images/pwc2021/';
                 $config['allowed_types']        = 'gif|jpg|png|jpeg';
                 $config['max_size']             = 2048;
                 // $config['max_width']            = 1024;
@@ -135,37 +136,35 @@ class DaftarPWC extends CI_Controller {
                     $this->load->view('daftar_pwc', $error);
                 } else {
                     $data = array('image' => $this->upload->data());
-                 	$current_id = $this->pwc->tambah_data_pwc($this->upload->data('file_name'));
-                    redirect(base_url('Success_PWC/'.$current_id));	
+                    $current_id = $this->pwc->tambah_data_pwc($this->upload->data('file_name'));
+                    redirect(base_url('Success_PWC/' . $current_id));
                 }
             }
         }
-	}
+    }
+
+    public function success_pwc($current_id)
+    {
+        $data['PWC'] = $this->pwc->get_pwc_by_id($current_id);
+        $this->load->view('notif/pwc/success_pwc', $data);
+    }
+
+    public function failed_pwc()
+    {
+        // $data['']=
+        $this->load->view('notif/pwc/failed_pwc');
+    }
 
 
+    // public function edit_gs()
+    // {
+    // 	$data['nt'] = $this->gs->edit_data_gelas();
+    // }	
 
-	public function success_pwc($current_id)
-	{
-		$data['PWC'] = $this->pwc->get_pwc_by_id($current_id);
-		$this->load->view('notif/pwc/success_pwc',$data);
-	}
-
-	public function failed_pwc()
-	{
-		// $data['']=
-		$this->load->view('notif/pwc/failed_pwc');
-	}
-
-
-	// public function edit_pwc()
-	// {
-	// 	$data['pwc'] = $this->pwc->edit_data_pwc();
-	// }	
-
-	// public function delete_pwc($id_peserta_pwc)
-	// {
-	// 	$data['pwc'] = $this->pwc->hapus_data_pwc($id_peserta_pwc);
-	// }
+    // public function delete_gs($id_peserta_gelas)
+    // {
+    // 	$data['nt'] = $this->gs->hapus_data_gelas($id_peserta_gelas);
+    // }
 
 
 }
