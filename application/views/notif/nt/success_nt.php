@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1"
     />
     <link rel="icon" href="<?= base_url() ?>assets/img/icon.png" type="image/png" />
     <title>DKC Tangerang Selatan</title>
@@ -122,62 +122,69 @@
     </header>
     <!--================ End Header Menu Area =================-->
 
-	<!-- Start Align Area -->
-	<div class="whole-wrap">
-		<div class="container">
-			<div class="section-top-border">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 mt-5">
-						<h3 class="mb-30 title_color text-center">Bukti Pendaftaran<br>Napak Tilas Cabang</h3>
-							<div class="container">
-									<div class="col-md-12 mt-2">
-										<div class="row justify-content-center card alert-danger">
-												<div class="container mt-3 mx-3">
-													<div class="alert-danger">
-															<blockquote class="generic-blockquote row py-0 px-0 mr-3">
-																<div class="col-lg-1">
-																	<i class="fas fa-info-circle fa-4x text-info my-2"></i>
-																</div>
-																<div class="col-lg-10">
-																	<div class="mt-2">
-																		<h3 class="text-danger">PERHATIAN !</h3>
-																		<h6 class="text-danger">Silahkan Screenshoot gambar dibawah ini sebagai bukti pendaftaran kegiatan Perkemahan Wirakarya Cabang(PWC) 2021</h6>
-																	</div>
-																</div>
-															</blockquote>
-													</div>
-												</div> 
-										</div>
-									</div>
-							</div>
-							<div class="container">
-            				<div class="alert-success rounded text-center mb-3 my-2">
-            					<i class="h2">BERHASIL </i><i class="fas fa-check-circle fa-2x"></i>
-            				</div>
-								<div class="row">
-            			<div class="testi_item">
-            				<img style="position: relative;" class="bukti-daftar" src="<?= base_url()?>assets/img/nt/success.png">
-            				<p class="text-white" style="position: absolute; top: 362px; left: 132px; font-size: 25px;"><?= $NT[0]['id_peserta_tatil'] ?></p>
-            				<p class="text-white" style="position: absolute; top: 362px; left: 180px; font-size: 25px;"><?= $NT[0]['nama_lengkap'] ?></p>
-            				<p class="text-white" style="position: absolute; top: 407px; left: 115px; font-size: 14pt;"><?= $NT[0]['ranting'] ?></p>
-            				<p class="text-white" style="position: absolute; top: 450px; left: 115px; font-size: 14pt;"><?= $NT[0]['pangkalan'] ?></p>
-            				<p class="text-white" style="position: absolute; top: 492px; left: 115px; font-size: 14pt;"><?php if($NT[0]['jenis_kelamin']) {
-            					echo "Laki Laki";
-            				} else {
-            					echo "Perempuan";
-            				} ?></p>
-            				<p class="text-white" style="position: absolute; top: 534px; left: 115px; font-size: 14pt;"><?= $NT[0]['no_hp'] ?></p>
-            				<p class="text-white" style="position: absolute; top: 572px; left: 115px; font-size: 14pt;"><?= $NT[0]['email'] ?></p>
-            				<img style="position: absolute; top: 360px; right: 80px; font-size: 14pt; width: 35%; height: 30%;" src="<?= base_url()?>peserta/images/nt2021/sertifikat_vaksin/<?= $NT[0]['sertifikat_vaksin']?>">
-            			</div>
-								</div>
-							</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Align Area -->
+  <!-- Start Align Area -->
+  <div class="whole-wrap">
+    <div class="container">
+      <div class="section-top-border">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 mt-5">
+            <h3 class="mb-30 title_color text-center">Bukti Pendaftaran<br>Perkemahan Wirakarya Cabang</h3>
+            <div class="container">
+              <div class="col-md-12 mt-2">
+                <div class="row justify-content-center card alert-danger">
+                  <div class="container mt-3 mx-3">
+                    <div class="alert-danger">
+                      <blockquote class="generic-blockquote row py-0 px-0 mr-3">
+                        <div class="col-lg-1 text-center">
+                          <i class="fas fa-info-circle fa-4x text-info my-2"></i>
+                        </div>
+                        <div class="col-lg-10 text-center">
+                          <div class="mt-2">
+                            <h3 class="text-danger">PERHATIAN !</h3>
+                            <h6 class="text-danger">Silahkan Screenshoot gambar dibawah ini sebagai bukti pendaftaran kegiatan Perkemahan Wirakarya Cabang(PWC) 2021</h6>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="alert-success rounded text-center mb-3 my-2">
+                <i class="h2">BERHASIL DAFTAR SEBAGAI <?=$NT[0]['jenis_peserta'] ?></i><i class="fas fa-check-circle fa-2x"></i>
+              </div>
+              <div class="row">
+                <div class="testi_item">
+                    <img style="position: relative; height: 50%; width: 100%;" class="bukti-daftar img-fluid" src="<?= base_url()?>assets/img/nt/success.png">
+                      <div class="container">
+                        <div class="testi_item">
+                          <p class="text-white id"><?= $NT[0]['id_peserta_tatil'] ?></p>
+                          <p class="text-white nm"><?= $NT[0]['nama_lengkap'] ?></p>
+                          <p class="text-white rn"><?= $NT[0]['ranting'] ?></p>
+                          <p class="text-white pk"><?= $NT[0]['pangkalan'] ?></p>
+                          <p class="text-white jk"><?php if($NT[0]['jenis_kelamin']) {echo "Laki Laki";} else {echo "Perempuan";} ?></p>
+                          <p class="text-white hp"><?= $NT[0]['no_hp'] ?></p>
+                          <p class="text-white em"><?= $NT[0]['email'] ?></p>
+                        </div>
+                    </div>
+                    <div class="container">
+                      <div class="testi_item">
+                      <img class="img-fluid sertif" src="<?= base_url()?>peserta/images/nt2021/sertifikat_vaksin/<?= $NT[0]['sertifikat_vaksin']?>">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <a href="<?= base_url('Home') ?>" class="col-md-4 float-right primary-btn rounded py-2">
+                <f style="font-size:17px;">Kembali Ke Halaman Utama</f>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Align Area -->
 
   <!--================ Start footer Area  =================-->
     <footer class="footer-area py-3">

@@ -30,6 +30,7 @@ class DaftarPWC extends CI_Controller
         $data['active'] = true;
         // set validation rules
         $this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required');
+        $this->form_validation->set_rules('jenis_peserta', 'Jenis Peserta', 'required');
         $this->form_validation->set_rules('no_hp', 'Nomor Telepon', 'required');
         $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required');
         $this->form_validation->set_rules('pangkalan', 'Pangkalan', 'required');
@@ -120,7 +121,7 @@ class DaftarPWC extends CI_Controller
             if ($this->input->post('TambahPWC')) {
 
                 // setting upload img rules
-                $config['upload_path']          = 'peserta/images/pwc2021/';
+                $config['upload_path']          = 'peserta/images/pwc2021/sertifikat_vaksin';
                 $config['allowed_types']        = 'gif|jpg|png|jpeg';
                 $config['max_size']             = 2048;
                 // $config['max_width']            = 1024;

@@ -30,6 +30,7 @@ class DaftarGelas extends CI_Controller
         $data['active'] = true;
         // set validation rules
         $this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required');
+        $this->form_validation->set_rules('jenis_peserta', 'Jenis Peserta', 'required');
         $this->form_validation->set_rules('no_hp', 'Nomor Telepon', 'required');
         $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required');
         $this->form_validation->set_rules('pangkalan', 'Pangkalan', 'required');

@@ -160,7 +160,8 @@
               </div>
               <div class="info_item mr-5">
                 <i class="ti-email"></i>
-                <h6><a href="#">dkctangsel@gmail.com</a></h6>
+                <h6><a href="https://mail.google.com/mail/u/0/?fs=1&to=dkctangsel@gmail.com&su&body&tf=cm
+">dkctangsel@gmail.com</a></h6>
                 <p>Hubungi kami untuk komunikasi lebih lanjut</p>
               </div>
             </div>
@@ -182,7 +183,7 @@
             <h4 class="mb-0 ml-5">Hubungi Kami</h4>
             <ul>
               <li class="mb-0 ml-1  "><a class="navbar-brand logo_h" href="<?= base_url('Home') ?>"><img class="logodkc" src="<?= base_url() ?>assets/img/logodkc.png" alt=""/></a></li>
-              <li class="mb-0 text-white ml-5"><i class="fas fa-envelope "></i> dkctangsel@gmail.com</a></li>
+              <li class="mb-0 text-white ml-5"><i class="fas fa-envelope "></i><a href="https://mail.google.com/mail/u/0/?fs=1&to=dkctangsel@gmail.com&su&body&tf=cm"> dkctangsel@gmail.com</a></li>
             </ul>
           </div>
         </div>

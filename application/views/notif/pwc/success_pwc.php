@@ -120,10 +120,10 @@
                   <div class="container mt-3 mx-3">
                     <div class="alert-danger">
                       <blockquote class="generic-blockquote row py-0 px-0 mr-3">
-                        <div class="col-lg-1">
+                        <div class="col-lg-1 text-center">
                           <i class="fas fa-info-circle fa-4x text-info my-2"></i>
                         </div>
-                        <div class="col-lg-10">
+                        <div class="col-lg-10 text-center">
                           <div class="mt-2">
                             <h3 class="text-danger">PERHATIAN !</h3>
                             <h6 class="text-danger">Silahkan Screenshoot gambar dibawah ini sebagai bukti pendaftaran kegiatan Perkemahan Wirakarya Cabang(PWC) 2021</h6>
@@ -137,28 +137,31 @@
             </div>
             <div class="container">
               <div class="alert-success rounded text-center mb-3 my-2">
-                <i class="h2">BERHASIL </i><i class="fas fa-check-circle fa-2x"></i>
+                <i class="h2">BERHASIL DAFTAR SEBAGAI <?=$PWC[0]['jenis_peserta'] ?></i><i class="fas fa-check-circle fa-2x"></i>
               </div>
               <div class="row">
-                <div class="testi_item mb-0">
-                  <img style="position: relative;" class="bukti-daftar" src="<?= base_url() ?>assets/img/pwc/success.png">
-
-                  <p class="text-white" style="position: absolute; top: 362px; left: 132px; font-size: 25px;"><?= $PWC[0]['id_peserta_pwc'] ?></p>
-                  <p class="text-white" style="position: absolute; top: 362px; left: 180px; font-size: 25px;"><?= $PWC[0]['nama_lengkap'] ?></p>
-                  <p class="text-white" style="position: absolute; top: 407px; left: 115px; font-size: 14pt;"><?= $PWC[0]['ranting'] ?></p>
-                  <p class="text-white" style="position: absolute; top: 450px; left: 115px; font-size: 14pt;"><?= $PWC[0]['pangkalan'] ?></p>
-                  <p class="text-white" style="position: absolute; top: 492px; left: 115px; font-size: 14pt;"><?php if ($PWC[0]['jenis_kelamin']) {
-                                                                                                                echo "Laki Laki";
-                                                                                                              } else {
-                                                                                                                echo "Perempuan";
-                                                                                                              } ?></p>
-                  <p class="text-white" style="position: absolute; top: 534px; left: 115px; font-size: 14pt;"><?= $PWC[0]['no_hp'] ?></p>
-                  <p class="text-white" style="position: absolute; top: 572px; left: 115px; font-size: 14pt;"><?= $PWC[0]['email'] ?></p>
-                  <img style="position: absolute; top: 360px; right: 80px; font-size: 14pt; width: 35%; height: 30%;" src="<?= base_url() ?>peserta/images/pwc2021/sertifikat_vaksin/<?= $PWC[0]['sertifikat_vaksin'] ?>">
+                <div class="testi_item">
+                  <img style="position: relative; height: 50%; width: 100%;" class="bukti-daftar img-fluid" src="<?= base_url() ?>assets/img/pwc/success.png">
+                  <div class="container">
+                    <div class="testi_item">
+                      <p class="text-white id"><?= $PWC[0]['id_peserta_pwc'] ?></p>
+                      <p class="text-white nm"><?= $PWC[0]['nama_lengkap'] ?></p>
+                      <p class="text-white rn"><?= $PWC[0]['ranting'] ?></p>
+                      <p class="text-white pk"><?= $PWC[0]['pangkalan'] ?></p>
+                      <p class="text-white jk"><?php if ($PWC[0]['jenis_kelamin']) {echo "Laki Laki";} else {echo "Perempuan";} ?></p>
+                      <p class="text-white hp"><?= $PWC[0]['no_hp'] ?></p>
+                      <p class="text-white em"><?= $PWC[0]['email'] ?></p>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <div class="testi_item">
+                  <img class="img-fluid sertif" src="<?= base_url() ?>peserta/images/pwc2021/sertifikat_vaksin/<?= $PWC[0]['sertifikat_vaksin'] ?>">
+                    </div>
+                  </div>
                 </div>
               </div>
               <a href="<?= base_url('Home') ?>" class="col-md-4 float-right primary-btn rounded py-2">
-                <f style="font-size:17px;">Kembali Daftar</f>
+                <f style="font-size:17px;">Kembali Ke Halaman Utama</f>
               </a>
             </div>
           </div>
@@ -212,7 +215,7 @@
   <script src="<?= base_url() ?>assets/js/gmaps.min.js"></script>
   <script src="<?= base_url() ?>assets/js/theme.js"></script>
   <script>
-    // alert("MOHON PERHATIANNYA UNTUK SCREENSHOT BUKTI PENDAFTARAN!");
+    alert("MOHON PERHATIANNYA UNTUK SCREENSHOT BUKTI PENDAFTARAN!");
   </script>
 </body>
 

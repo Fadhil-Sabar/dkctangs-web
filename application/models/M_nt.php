@@ -7,6 +7,7 @@ class M_nt extends CI_Model
     {
         $data = [
             'nama_lengkap' => $this->input->post('nama_lengkap', true),
+            'jenis_peserta' => $this->input->post('jenis_peserta', true),
             'no_hp' => $this->input->post('no_hp', true),
             'jenis_kelamin' => $this->input->post('jenis_kelamin', true),
             'pangkalan' => $this->input->post('pangkalan', true),

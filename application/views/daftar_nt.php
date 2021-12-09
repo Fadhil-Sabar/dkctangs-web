@@ -124,26 +124,25 @@
     </header>
     <!--================ End Header Menu Area =================-->
 
-    <!--================Home Banner Area =================-->
-    <section class="banner_area">
-      <div class="banner_inner d-flex align-items-center">
-        <!-- <div class="overlay"></div> -->
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-6">
-              <div class="banner_content text-center">
-                <h2>Form Pendaftaran Napak Tilas Cabang</h2>
-                <div class="page_link">
-                  <a href="<?= base_url('Home') ?>">Home</a>
-                  <a href="<?= base_url('Daftar') ?>">Daftar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================End Home Banner Area =================-->
+	<!--================TOMBOL ANOTHER REGISTER ==============-->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="row">
+					<div class="col-md-4">
+					<a class="btn-block primary-btn circle e-large my-3 mx-2" href=""><b class="text-white">Pembina Pendamping</b></a>
+				</div>
+				<div class="col-md-4">
+					<a class="btn-block primary-btn circle e-large my-3 mx-2" href="<?= base_url('Daftar_NT') ?>"><b class="text-white">Peserta</b></a>
+				</div>
+				<div class="col-md-4">
+					<a class="btn-block primary-btn circle e-large my-3 mx-2" href=""><b class="text-white">Pimpinan Kontingen</b></a>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================TOMBOL ANOTHER REGISTER ==============-->
 
 	<!-- Start Align Area -->
 	<div class="whole-wrap">
@@ -151,199 +150,227 @@
 			<div class="section-top-border">
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<h3 class="mb-30 title_color text-center">Form Pendaftaran<br>Napak Tilas Cabang</h3>
-							<div class="container mb-3 ml-3">
-								<div class="row">
-<!-- 									<div class="col-md-6 mt-2">
-										<div class="row justify-content-center card alert-danger">
-												<div class="container mt-3 mx-3">
-													<div class="alert-danger">
-															<blockquote class="generic-blockquote row py-0 px-0 mr-3">
-																<div class="container row">
-																	<div class="col-lg-2 text-center">
-																		<i class="fas fa-info-circle fa-4x text-info mt-2"></i>
-																	</div>
-																	<div class="col-lg-10 text-center">
-																		<h3 class="text-danger">PERHATIAN</h3>
-																		<h6 class="text-danger">Silahkan Download terlebih dahulu Petunjuk Teknis dan Petunjuk Pelaksanaan sebelum melakukan pendaftaran</h6>
-																	</div>
-																</div>
-															</blockquote>
+						<h3 class="mb-30 title_color text-center">Form Pendaftaran<br>Gelar Senja Cabang</h3>
+						<div class="container mb-3 ml-3">
+							<div class="row">
+								<div class="col-md-6 mt-2">
+									<div class="row justify-content-center card alert-danger">
+										<div class="container mt-3 mx-3">
+											<div class="alert-danger">
+												<blockquote class="generic-blockquote row py-0 px-0 mr-3">
+													<div class="container row">
+														<div class="col-lg-2 text-center">
+															<i class="fas fa-info-circle fa-4x text-info mt-2"></i>
+														</div>
+														<div class="col-lg-10 text-center">
+															<h3 class="text-danger">PERHATIAN</h3>
+															<h6 class="text-danger">Silahkan Download terlebih dahulu Petunjuk Teknis dan Petunjuk Pelaksanaan sebelum melakukan pendaftaran</h6>
+														</div>
 													</div>
-												</div> 
+												</blockquote>
+											</div>
 										</div>
 									</div>
-									<div class="col-md-6 row mt-2">
-											<div class="col-md-6 text-center">
-												<label> Petunjuk Pelaksanaan</label>
-												<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">Download Juklak</a>
-											</div>
-											<div class="col-md-6 text-center">
-												<label> Petunjuk Teknis</label>
-												<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">Download Juknis</a>
-											</div>
-									</div> -->
+								</div>
+								<div class="col-md-6 row mt-2">
+									<div class="col-md-6 text-center">
+										<label> Petunjuk Pelaksanaan</label>
+										<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">SOON</a>
+									</div>
+									<div class="col-md-6 text-center">
+										<label> Petunjuk Teknis</label>
+										<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">SOON</a>
+									</div>
 								</div>
 							</div>
+						</div>
 						<div class="row">
 							<div class="col-md-7">
-								<form action="<?= base_url()?>DaftarNT/add_nt" method="post"  enctype="multipart/form-data">
-										<div class="col-md-12">
-											<div class="form-group mt-10">
-												<input type="text" class="form-control" name="nama_lengkap" placeholder="Nama Lengkap" style="text-transform: uppercase;"
-												 <?php if (form_error('nama_lengkap')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('nama_lengkap'); ?>">
-											</div>
+								<form action="<?= base_url() ?>DaftarNT/add_nt" method="post" enctype="multipart/form-data">
+									<div class="col-md-12">
+										<div class="form-group mt-10">
+											<input type="text" class="form-control" name="nama_lengkap" placeholder="Nama Lengkap" style="text-transform: uppercase;" <?php if (form_error('nama_lengkap')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('nama_lengkap'); ?>">
 										</div>
-										<div class="container">
-											<div class="row">
-												<div class="col-md-6">
-													<div class="form-group input-group-icon mt-10">
-														<div class="icon"><i class="ti-location-arrow" aria-hidden="true"></i></div>
-														<div class="form-select" id="default-select">
-															<select name="ranting" class="custom-select form-control">
-																<option selected disabled>Pilih Ranting</option>
-																<option value="Serpong Utara"<?= set_select('ranting', 'Serpong Utara') ?>>SERPONG UTARA</option>
-																<option value="Serpong"<?= set_select('ranting', 'Serpong') ?>>SERPONG</option>
-																<option value="Setu"<?= set_select('ranting', 'Setu') ?>>SETU</option>
-																<option value="Pondok Aren"<?= set_select('ranting', 'Pondok Aren') ?>>PONDOK AREN</option>
-																<option value="Pamulang"<?= set_select('ranting', 'Pamulang') ?>>PAMULANG</option>
-																<option value="Ciputat"<?= set_select('ranting', 'Ciputat') ?>>CIPUTAT</option>
-																<option value="Ciputat Timur"<?= set_select('ranting', 'Ciputat Timur') ?>>CIPUTAT TIMUR</option>
-															</select>
-														</div>
-													</div>
-												</div>
-												<div class="form-group col-md-6">
-													<div class="mt-10">
-														<input type="text" class="form-control" name="pangkalan" placeholder="Pangkalan" style="text-transform: uppercase;"
-														 <?php if (form_error('pangkalan')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('pangkalan'); ?>">
-													 <label><b class="text-danger">* </b>Silahkan isi dengan <b>ASAL SEKOLAH</b></label>
+									</div>
+									<div class="container">
+										<div class="row">
+											<div class="form-group col-md-6">
+												<div class="input-group-icon">
+													<div class="icon"><i class="fas fa-user" aria-hidden="true"></i></div>
+													<div class="form-select" id="default-select">
+														<select name="jenis_peserta" class="custom-select form-control">
+															<option selected disabled>Jenis Peserta</option>
+															<option value="Peserta" <?= set_select('jenis_kelamin', 'Peserta') ?>>PESERTA</option>
+															<option value="Pembina Pendamping" <?= set_select('jenis_kelamin', 'Pembina Pendamping') ?>>PEMBINA PENDAMPING</option>
+															<option value="Pimpinan Kontingen" <?= set_select('jenis_kelamin', 'Pimpinan Kontingen') ?>>PIMPINAN KONTINGEN</option>
+														</select>
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="container">
-											<div class="row">
-												<div class="col-md-6">
-													<div class="form-group">
-														<div class="mt-10">
-															<input type="text" class="form-control" name="tempat_lahir" placeholder="Tempat Lahir" style="text-transform: uppercase;" 
-															 <?php if (form_error('tempat_lahir')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('tempat_lahir'); ?>">
-														</div>
+											<div class="col-md-6">
+												<div class="form-group input-group-icon">
+													<div class="icon"><i class="fas fa-code-branch" aria-hidden="true"></i></div>
+													<div class="form-select" id="default-select">
+														<select name="ranting" class="custom-select form-control">
+															<option selected disabled>Pilih Ranting</option>
+															<option value="Serpong Utara" <?= set_select('ranting', 'Serpong Utara') ?>>SERPONG UTARA</option>
+															<option value="Serpong" <?= set_select('ranting', 'Serpong') ?>>SERPONG</option>
+															<option value="Setu" <?= set_select('ranting', 'Setu') ?>>SETU</option>
+															<option value="Pondok Aren" <?= set_select('ranting', 'Pondok Aren') ?>>PONDOK AREN</option>
+															<option value="Pamulang" <?= set_select('ranting', 'Pamulang') ?>>PAMULANG</option>
+															<option value="Ciputat" <?= set_select('ranting', 'Ciputat') ?>>CIPUTAT</option>
+															<option value="Ciputat Timur" <?= set_select('ranting', 'Ciputat Timur') ?>>CIPUTAT TIMUR</option>
+														</select>
 													</div>
 												</div>
-												<div class="col-md-6">
-													<div class="form-group">
-														<div class="mt-10">
-															<input type="date" class="form-control" name="tanggal_lahir" placeholder="Tanggal Lahir" style="text-transform: uppercase;" value="" min="1997-01-01" max="2030-12-31"
-															 <?php if (form_error('tanggal_lahir')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('tanggal_lahir'); ?>">
-													<label><b class="text-danger">* </b>Isi dengan format tanggal <b>BULAN/HARI/TAHUN</b></label>
-														</div>
-													</div>
-												</div>	
 											</div>
 										</div>
-										<div class="form-group col-md-6">
-											<div class="input-group-icon">
-												<div class="icon"><i class="ti-location-arrow" aria-hidden="true"></i></div>
+									</div>
+									<div class="container">
+										<div class="row">
+											<div class="form-group col-md-6">
+												<div class="mt-10">
+													<input type="text" class="form-control" name="pangkalan" placeholder="Pangkalan" style="text-transform: uppercase;" <?php if (form_error('pangkalan')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('pangkalan'); ?>">
+													<label><b class="text-danger">* </b>Silahkan isi dengan <b>ASAL SEKOLAH</b></label>
+												</div>
+											</div>
+											<div class="form-group col-md-6">
+												<div class="input-group-icon mt-10">
+													<div class="icon"><i class="fas fa-venus-mars" aria-hidden="true"></i></div>
 													<div class="form-select" id="default-select">
 														<select name="jenis_kelamin" class="custom-select form-control">
 															<option selected disabled>Jenis Kelamin</option>
-															<option value="1"<?= set_select('jenis_kelamin', 1) ?>>LAKI LAKI</option>
-															<option value="2"<?= set_select('jenis_kelamin', 2) ?>>PEREMPUAN</option>
+															<option value="1" <?= set_select('jenis_kelamin', 1) ?>>LAKI LAKI</option>
+															<option value="2" <?= set_select('jenis_kelamin', 2) ?>>PEREMPUAN</option>
 														</select>
 													</div>
-											</div>
-										</div>
-										<div class="container">
-											<div class="row">
-												<div class="col-md-6">
-													<div class="form-group mt-10">
-														<input type="number" class="form-control" name="no_hp" placeholder="Nomor Telepon" style="text-transform: uppercase;"
-														 <?php if (form_error('no_hp')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('no_hp'); ?>">
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="form-group mt-10">
-														<input type="email" class="form-control" name="email" placeholder="EMAIL"
-														 <?php if (form_error('email')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('email'); ?>">
-													</div>
 												</div>
 											</div>
 										</div>
-										<div class="form-group col-md-12 mt-10">
-												<input type="text" class="form-control" name="penyakit" placeholder="Penyakit Yang Pernah/Sedang Di Derita" style="text-transform: uppercase;"
-												 <?php if (form_error('penyakit')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('penyakit'); ?>">
-												 <label><b class="text-danger">* </b>Silahkan isi <b>TIDAK ADA</b> jika tidak mempunyai riwayat penyakit</label>
+									</div>
+									<div class="container">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+														<input type="date" class="form-control" name="tanggal_lahir" placeholder="Tanggal Lahir" style="text-transform: uppercase;" value="" min="1700-01-01" max="2100-12-31" <?php if (form_error('tanggal_lahir')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('tanggal_lahir'); ?>">
+														<label><b class="text-danger">* </b>Isi dengan format tanggal <b>BULAN/HARI/TAHUN</b></label>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+														<input type="text" class="form-control" name="tempat_lahir" placeholder="Tempat Lahir" style="text-transform: uppercase;" <?php if (form_error('tempat_lahir')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('tempat_lahir'); ?>">
+												</div>
+											</div>
 										</div>
+									</div>
+									<div class="container">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="number" class="form-control" name="no_hp" placeholder="Nomor Telepon" style="text-transform: uppercase;" <?php if (form_error('no_hp')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('no_hp'); ?>">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="email" class="form-control" name="email" placeholder="EMAIL" <?php if (form_error('email')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('email'); ?>">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group col-md-12 mt-10">
+										<input type="text" class="form-control" name="penyakit" placeholder="Penyakit Yang Pernah/Sedang Di Derita" style="text-transform: uppercase;" <?php if (form_error('penyakit')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('penyakit'); ?>">
+										<label><b class="text-danger">* </b>Silahkan isi <b>TIDAK ADA</b> jika tidak mempunyai riwayat penyakit</label>
+									</div>
 							</div>
 							<div class="col-md-5">
-								<img class="img-fluid col-lg-12 col-md-6" src="<?= base_url()?>assets/img/banner/form-1.png">
+								<img class="img-fluid col-lg-12 col-md-6" src="<?= base_url() ?>assets/img/banner/form-3.png">
 							</div>
-			       </div>
-			       			<div class="row">
-		              	<div class="col-md-4">
-		                                <div class="contain text-center pt-2">
-		                                    <div>
-		                                        <label class="text-white"><b class="text-danger">* </b>Upload Sertifikat Vaksin</label>
-		                                        <div id="file-upload-form" class="uploader">
-		                                            <input id="file-upload" type="file" name="sertifikat_vaksin" accept="image/*" />
-
-		                                            <label for="file-upload" id="file-drag">
-		                                                <img id="file-image" src="#" alt="Preview" class="hidden">
-		                                                <div id="start">
-		                                                    <i class="fa fa-download" aria-hidden="true"></i>
-		                                                    <div>Pilih file atau tarik disini</div>
-		                                                    <div id="notimage" class="hidden">Pilih gambar</div>
-		                                                    <span id="file-upload-btn" class="btn btn-primary">Pilih file</span>
-		                                                </div>
-		                                                <div id="response" class="hidden">
-		                                                    <div id="messages"></div>
-		                                                </div><br>
-		                                                <small>Hanya JPG, JPEG, PNG dan GIF yang diizinkan.</small><br>
-		                                                <small>Ukuran maksimum 2 MB.</small>
-		                                                <?php if (form_error('sertifikat_vaksin')) : ?>
-		                                                    <div class="text-danger mt-2">
-		                                                        <?= form_error('sertifikat_vaksin'); ?>
-		                                                    </div>
-		                                                <?php endif; ?>
-
-		                                                <?php if (isset($error)) : ?>
-		                                                    <div class="text-danger mt-2">
-		                                                        <?= $error ?>
-		                                                    </div>
-		                                                <?php endif; ?>
-		                                            </label>
-		                                        </div>
-		                                    </div>
-		                                </div>
-		              	</div>
-		              	<div class="col-md-4">
-		                                <div class="contain text-center pt-2">
-		                                    <div>
-		                                        <label class="text-white"><b class="text-danger">* </b>Upload Surat Kesehatan</label>
-		                                            <input id="file-upload" type="file" name="surat_kesehatan" accept="image/*"/>
-		                                        </div>
-		                                    </div>
-		              	</div>
-		              	<div class="col-md-4">
-		                                <div class="contain text-center pt-2">
-		                                    <div>
-		                                        <label class="text-white"><b class="text-danger">* </b>Upload Surat Mandat</label>
-		                                            <input id="file-upload" type="file" name="surat_mandat" accept="image/*" />
-		                                        </div>
-		                                    </div>
-		              	</div>
-		              </div>
-									<div class="col-md-12 text-center">
-										<input class="genric-btn primary circle e-large mt-3" type="submit" value="Daftar" name="TambahNT" style="font-size: 25px;"></input>
-									</div>
-								</form>
 						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="contain text-center pt-2">
+									<div>
+										<label class="text-white"><b class="text-danger">* </b>Upload Sertifikat Vaksin</label>
+										<div id="file-upload-form" class="uploader">
+											<input id="file-upload" type="file" name="sertifikat_vaksin" accept="image/*" />
+
+											<label for="file-upload" id="file-drag">
+												<img id="file-image" src="#" alt="Preview" class="hidden">
+												<div id="start">
+													<i class="fa fa-download" aria-hidden="true"></i>
+													<div>Pilih file atau tarik disini</div>
+													<div id="notimage" class="hidden">Pilih gambar</div>
+													<span id="file-upload-btn" class="btn btn-primary">Pilih file</span>
+												</div>
+												<div id="response" class="hidden">
+													<div id="messages"></div>
+												</div><br>
+												<small>Hanya JPG, JPEG, PNG dan GIF yang diizinkan.</small><br>
+												<small>Ukuran maksimum 2 MB.</small>
+												<?php if (form_error('sertifikat_vaksin')) : ?>
+													<div class="text-danger mt-2">
+														<?= form_error('sertifikat_vaksin'); ?>
+													</div>
+												<?php endif; ?>
+
+												<?php if (isset($error)) : ?>
+													<div class="text-danger mt-2">
+														<?= $error ?>
+													</div>
+												<?php endif; ?>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="contain text-center pt-2">
+									<div>
+										<label class="text-white"><b class="text-danger">* </b>Upload Surat Kesehatan</label>
+										<input id="file-upload" type="file" name="surat_kesehatan" accept="image/*" />
+										<?php if (form_error('surat_kesehatan')) : ?>
+											<div class="text-danger mt-2">
+												<?= form_error('surat_kesehatan'); ?>
+											</div>
+										<?php endif; ?>
+
+										<?php if (isset($error)) : ?>
+											<div class="text-danger mt-2">
+												<?= $error ?>
+											</div>
+										<?php endif; ?>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="contain text-center pt-2">
+									<div>
+										<label class="text-white"><b class="text-danger">* </b>Upload Surat Mandat</label>
+										<input id="file-upload" type="file" name="surat_mandat" accept="image/*" />
+										<?php if (form_error('surat_mandat')) : ?>
+											<div class="text-danger mt-2">
+												<?= form_error('surat_mandat'); ?>
+											</div>
+										<?php endif; ?>
+
+										<?php if (isset($error)) : ?>
+											<div class="text-danger mt-2">
+												<?= $error ?>
+											</div>
+										<?php endif; ?>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 text-center">
+							<input class="genric-btn primary circle e-large mt-3" type="submit" value="Daftar" name="TambahNT" style="font-size: 25px;"></input>
+						</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 	<!-- End Align Area -->
 

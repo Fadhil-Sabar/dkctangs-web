@@ -315,7 +315,7 @@
             <div class="col-lg-4 col-md-4">
               <div class="single_event position-relative">
                 <div class="event_thumb">
-                  <!-- <img src="<?= base_url() ?>assets/img/banner-home-3.jpg" alt="" /> -->
+                  <img src="<?= base_url() ?>assets/img/banner/e1.jpg" alt="" />
                 </div>
                 <div class="event_details">
                   <h5 class="text-white">Perkemahan Wirakarya Cabang (PWC)</h5>
@@ -342,7 +342,7 @@
             <div class="col-lg-4 col-md-4">
               <div class="single_event position-relative">
                 <div class="event_thumb">
-                  <img src="<?= base_url() ?>assets/img/banner/form-1.png" alt="" />
+                  <img src="<?= base_url() ?>assets/img/banner/e1.jpg" alt="" />
                 </div>
                 <div class="event_details">
                   <h5 class="text-white">Napak Tilas Dewan Kerja Cabang (DKC)</h5>
@@ -369,7 +369,7 @@
             <div class="col-lg-4 col-md-4">
               <div class="single_event position-relative">
                 <div class="event_thumb">
-                  <!-- <img src="<?= base_url() ?>assets/img/event/e2.jpg" alt="" /> -->
+                  <img src="<?= base_url() ?>assets/img/banner/e1.jpg" alt="" />
                 </div>
                 <div class="event_details">
                   <h5 class="text-white">Gelar Senja Dewan Kerja Cabang (DKC)</h5>

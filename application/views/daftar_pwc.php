@@ -136,7 +136,7 @@
 			<div class="section-top-border">
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<h3 class="mb-30 title_color text-center">Form Pendaftaran<br>Perkemahan Wirakarya Cabang</h3>
+						<h3 class="mb-30 title_color text-center">Form Pendaftaran<br>Gelar Senja Cabang</h3>
 						<div class="container mb-3 ml-3">
 							<div class="row">
 								<div class="col-md-6 mt-2">
@@ -161,11 +161,11 @@
 								<div class="col-md-6 row mt-2">
 									<div class="col-md-6 text-center">
 										<label> Petunjuk Pelaksanaan</label>
-										<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">Download Juklak</a>
+										<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">SOON</a>
 									</div>
 									<div class="col-md-6 text-center">
 										<label> Petunjuk Teknis</label>
-										<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">Download Juknis</a>
+										<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">SOON</a>
 									</div>
 								</div>
 							</div>
@@ -180,9 +180,22 @@
 									</div>
 									<div class="container">
 										<div class="row">
+											<div class="form-group col-md-6">
+												<div class="input-group-icon">
+													<div class="icon"><i class="fas fa-user" aria-hidden="true"></i></div>
+													<div class="form-select" id="default-select">
+														<select name="jenis_peserta" class="custom-select form-control">
+															<option selected disabled>Jenis Peserta</option>
+															<option value="Peserta" <?= set_select('jenis_kelamin', 'Peserta') ?>>PESERTA</option>
+															<option value="Pembina Pendamping" <?= set_select('jenis_kelamin', 'Pembina Pendamping') ?>>PEMBINA PENDAMPING</option>
+															<option value="Pimpinan Kontingen" <?= set_select('jenis_kelamin', 'Pimpinan Kontingen') ?>>PIMPINAN KONTINGEN</option>
+														</select>
+													</div>
+												</div>
+											</div>
 											<div class="col-md-6">
-												<div class="form-group input-group-icon mt-10">
-													<div class="icon"><i class="ti-location-arrow" aria-hidden="true"></i></div>
+												<div class="form-group input-group-icon">
+													<div class="icon"><i class="fas fa-code-branch" aria-hidden="true"></i></div>
 													<div class="form-select" id="default-select">
 														<select name="ranting" class="custom-select form-control">
 															<option selected disabled>Pilih Ranting</option>
@@ -197,54 +210,54 @@
 													</div>
 												</div>
 											</div>
+										</div>
+									</div>
+									<div class="container">
+										<div class="row">
 											<div class="form-group col-md-6">
 												<div class="mt-10">
 													<input type="text" class="form-control" name="pangkalan" placeholder="Pangkalan" style="text-transform: uppercase;" <?php if (form_error('pangkalan')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('pangkalan'); ?>">
 													<label><b class="text-danger">* </b>Silahkan isi dengan <b>ASAL SEKOLAH</b></label>
 												</div>
 											</div>
+											<div class="form-group col-md-6">
+												<div class="input-group-icon mt-10">
+													<div class="icon"><i class="fas fa-venus-mars" aria-hidden="true"></i></div>
+													<div class="form-select" id="default-select">
+														<select name="jenis_kelamin" class="custom-select form-control">
+															<option selected disabled>Jenis Kelamin</option>
+															<option value="1" <?= set_select('jenis_kelamin', 1) ?>>LAKI LAKI</option>
+															<option value="2" <?= set_select('jenis_kelamin', 2) ?>>PEREMPUAN</option>
+														</select>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 									<div class="container">
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
-													<div class="mt-10">
-														<input type="text" class="form-control" name="tempat_lahir" placeholder="Tempat Lahir" style="text-transform: uppercase;" <?php if (form_error('tempat_lahir')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('tempat_lahir'); ?>">
-													</div>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<div class="mt-10">
 														<input type="date" class="form-control" name="tanggal_lahir" placeholder="Tanggal Lahir" style="text-transform: uppercase;" value="" min="1700-01-01" max="2100-12-31" <?php if (form_error('tanggal_lahir')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('tanggal_lahir'); ?>">
 														<label><b class="text-danger">* </b>Isi dengan format tanggal <b>BULAN/HARI/TAHUN</b></label>
-													</div>
 												</div>
 											</div>
-										</div>
-									</div>
-									<div class="form-group col-md-6">
-										<div class="input-group-icon">
-											<div class="icon"><i class="ti-location-arrow" aria-hidden="true"></i></div>
-											<div class="form-select" id="default-select">
-												<select name="jenis_kelamin" class="custom-select form-control">
-													<option selected disabled>Jenis Kelamin</option>
-													<option value="1" <?= set_select('jenis_kelamin', 1) ?>>LAKI LAKI</option>
-													<option value="2" <?= set_select('jenis_kelamin', 2) ?>>PEREMPUAN</option>
-												</select>
+											<div class="col-md-6">
+												<div class="form-group">
+														<input type="text" class="form-control" name="tempat_lahir" placeholder="Tempat Lahir" style="text-transform: uppercase;" <?php if (form_error('tempat_lahir')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('tempat_lahir'); ?>">
+												</div>
 											</div>
 										</div>
 									</div>
 									<div class="container">
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group mt-10">
+												<div class="form-group">
 													<input type="number" class="form-control" name="no_hp" placeholder="Nomor Telepon" style="text-transform: uppercase;" <?php if (form_error('no_hp')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('no_hp'); ?>">
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div class="form-group mt-10">
+												<div class="form-group">
 													<input type="email" class="form-control" name="email" placeholder="EMAIL" <?php if (form_error('email')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('email'); ?>">
 												</div>
 											</div>
