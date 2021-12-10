@@ -1105,7 +1105,7 @@ button:focus {
   transition: all 0.3s ease 0s; }
 
 
-  @media (max-width: 995px) {
+  @media (max-width: 993px) {
     .testi_item {
       margin-bottom: 0px; } 
     }
@@ -1165,10 +1165,10 @@ button:focus {
           font-size: 14pt;
         }
 
-    @media screen and (min-width: 993px){ 
+    @media screen and (min-width: 992px){ 
         .testi_item .sertif {
         position: absolute; 
-        top: 330px; 
+        top: 350px; 
         right: 95px; 
         width: 35%; 
         height: auto; 
@@ -1240,9 +1240,9 @@ button:focus {
 
         .testi_item .sertif {
           position: absolute; 
-          top: 444px; 
-          right: 80px; 
-          width: 30%; 
+          top: 434px; 
+          right: 95px; 
+          width: 140px; 
           height: auto; 
         } 
 

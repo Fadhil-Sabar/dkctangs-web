@@ -175,9 +175,16 @@
                     </div>
                   </div>
               </div>
-              <a href="<?= base_url('Home') ?>" class="col-md-4 float-right primary-btn rounded py-2">
+              <div class="container">
+                <div class="row justify-content-between">
+                  <a href="<?= base_url('Home') ?>" class="col-md-4 primary-btn rounded py-2">
                 <f style="font-size:17px;">Kembali Ke Halaman Utama</f>
               </a>
+              <a href="https://chat.whatsapp.com/FpWnFsmKQfcHJcbeuwNU3g" class="col-md-4 float-right genric-btn success rounded py-2">
+                <f style="font-size:25px;">Bergabung ke Grup WA <i class="fab fa-whatsapp"></i></f>
+              </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
