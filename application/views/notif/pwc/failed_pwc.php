@@ -135,10 +135,10 @@
 												<div class="container mt-3 mx-3">
 													<div class="alert-danger">
 															<blockquote class="generic-blockquote row py-0 px-0 mr-3">
-																<div class="col-lg-1">
+																<div class="col-lg-1 text-center">
 																	<i class="fas fa-info-circle fa-4x text-info my-2"></i>
 																</div>
-																<div class="col-lg-8">
+																<div class="col-lg-8 text-center">
 																	<div class="mt-2">
 																		<h3 class="text-danger">PERHATIAN !</h3>
 																		<h6 class="text-danger">Silahkan pastikan anda mengisi form dengan data yang valid</h6>

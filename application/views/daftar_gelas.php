@@ -135,7 +135,7 @@
                 <h2>Form Pendaftaran Gelar Senja Cabang</h2>
                 <div class="page_link">
                   <a href="<?= base_url('Home') ?>">Home</a>
-                  <a href="<?= base_url('Daftar') ?>">Daftar</a>
+                  <a href="<?= base_url('Daftar_GS') ?>">Daftar</a>
                 </div>
               </div>
             </div>
@@ -174,16 +174,11 @@
 									</div>
 								</div>
 								<div class="col-md-6 row mt-2">
-									<div class="col-md-6 text-center">
-										<label> Petunjuk Pelaksanaan</label>
-										<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">SOON</a>
+									<div class="col-md-12 text-center">
+										<label> Petunjuk Pelaksanaan & Teknis</label>
+										<a class="btn-block primary-btn circle e-large mt-4 mx-2 text-white">SOON</a>
 									</div>
-									<div class="col-md-6 text-center">
-										<label> Petunjuk Teknis</label>
-										<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">SOON</a>
-									</div>
-								</div>
-							</div>
+								</div>							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-7">

@@ -137,25 +137,26 @@
             </div>
             <div class="container">
               <div class="alert-success rounded text-center mb-3 my-2">
-                <i class="h2">BERHASIL </i><i class="fas fa-check-circle fa-2x"></i>
+                <i class="h2">Berhasil Daftar Sebagai <b><?= $PWC[0]['jenis_peserta'] ?></b> </i><i class="fas fa-check-circle fa-2x"></i>
               </div>
               <div class="row">
-                <div class="testi_item">
-                  <img style="position: relative; height: 50%; width: 100%;" class="bukti-daftar img-fluid" src="<?= base_url() ?>assets/img/pwc/success.png">
-                  <div class="container">
-                    <div class="testi_item">
-                      <p class="text-white id"><?= $PWC[0]['id_peserta_pwc'] ?></p>
-                      <p class="text-white nm"><?= $PWC[0]['nama_lengkap'] ?></p>
-                      <p class="text-white rn"><?= $PWC[0]['ranting'] ?></p>
-                      <p class="text-white pk"><?= $PWC[0]['pangkalan'] ?></p>
-                      <p class="text-white jk"><?php if ($PWC[0]['jenis_kelamin']) {echo "Laki Laki";} else {echo "Perempuan";} ?></p>
-                      <p class="text-white hp"><?= $PWC[0]['no_hp'] ?></p>
-                      <p class="text-white em"><?= $PWC[0]['email'] ?></p>
+                <div class="testi_item row" style="background-color:#002347 ;">
+                  <div class="col-md-6">
+                    <div class="container">
+                      <p class="text-white">Sebagai       : <b><?= $PWC[0]['jenis_peserta'] ?></b></p>
+                      <p class="text-white">Id Peserta    : <b><?= $PWC[0]['id_peserta_pwc'] ?></b></p>
+                      <p class="text-white">Nama Peserta  : <b><?= $PWC[0]['nama_lengkap'] ?></b></p>
+                      <p class="text-white">Ranting       : <b><?= $PWC[0]['ranting'] ?></b></p>
+                      <p class="text-white">Pangkalan     : <b><?= $PWC[0]['pangkalan'] ?></b></p>
+                      <p class="text-white">Jenis Kelamin : <?php if ($PWC[0]['jenis_kelamin']) {echo "<b>Laki Laki</b>";} else {echo "<b>Perempuan</b>";} ?></p>
+                      <p class="text-white">No Telepon    : <b><?= $PWC[0]['no_hp'] ?></b></p>
+                      <p class="text-white">Email         : <b><?= $PWC[0]['email'] ?></b></p>
                     </div>
                   </div>
+                    <div class="col-md-6">
                   <div class="container">
-                    <div class="testi_item">
-                  <img class="img-fluid sertif" src="<?= base_url() ?>peserta/images/pwc2021/sertifikat_vaksin/<?= $PWC[0]['sertifikat_vaksin'] ?>">
+                  <img class="img-fluid" src="<?= base_url() ?>peserta/images/pwc2021/sertifikat_vaksin/<?= $PWC[0]['sertifikat_vaksin'] ?>">
+                  </div>
                     </div>
                   </div>
                 </div>
@@ -165,7 +166,7 @@
                   <a href="<?= base_url('Home') ?>" class="col-md-4 primary-btn rounded py-2">
                 <f style="font-size:17px;">Kembali Ke Halaman Utama</f>
               </a>
-              <a href="https://chat.whatsapp.com/FpWnFsmKQfcHJcbeuwNU3g" class="col-md-4 float-right genric-btn success rounded py-2">
+              <a href="https://chat.whatsapp.com/FpWnFsmKQfcHJcbeuwNU3g" class="col-md-4 genric-btn success rounded py-2">
                 <f style="font-size:25px;">Bergabung ke Grup WA <i class="fab fa-whatsapp"></i></f>
               </a>
                 </div>
@@ -222,7 +223,7 @@
   <script src="<?= base_url() ?>assets/js/gmaps.min.js"></script>
   <script src="<?= base_url() ?>assets/js/theme.js"></script>
   <script>
-    alert("MOHON PERHATIANNYA UNTUK SCREENSHOT BUKTI PENDAFTARAN!");
+    // alert("MOHON PERHATIANNYA UNTUK SCREENSHOT BUKTI PENDAFTARAN!");
   </script>
 </body>
 

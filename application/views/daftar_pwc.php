@@ -120,7 +120,7 @@
 							<h2>Form Pendaftaran Perkemahan Wirakarya Cabang</h2>
 							<div class="page_link">
 								<a href="<?= base_url('Home') ?>">Home</a>
-								<a href="<?= base_url('Daftar') ?>">Daftar</a>
+								<a href="<?= base_url('Daftar_PWC') ?>">Daftar</a>
 							</div>
 						</div>
 					</div>
@@ -136,7 +136,7 @@
 			<div class="section-top-border">
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<h3 class="mb-30 title_color text-center">Form Pendaftaran<br>Gelar Senja Cabang</h3>
+						<h3 class="mb-30 title_color text-center">Form Pendaftaran<br>Perkemahan Wirakarya Cabang</h3>
 						<div class="container mb-3 ml-3">
 							<div class="row">
 								<div class="col-md-6 mt-2">
@@ -159,13 +159,9 @@
 									</div>
 								</div>
 								<div class="col-md-6 row mt-2">
-									<div class="col-md-6 text-center">
-										<label> Petunjuk Pelaksanaan</label>
-										<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">SOON</a>
-									</div>
-									<div class="col-md-6 text-center">
-										<label> Petunjuk Teknis</label>
-										<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">SOON</a>
+									<div class="col-md-12 text-center">
+										<label> Petunjuk Pelaksanaan & Teknis</label>
+										<a class="btn-block primary-btn circle e-large mt-4 mx-2 text-white">SOON</a>
 									</div>
 								</div>
 							</div>

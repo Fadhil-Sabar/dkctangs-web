@@ -124,25 +124,26 @@
     </header>
     <!--================ End Header Menu Area =================-->
 
-	<!--================TOMBOL ANOTHER REGISTER ==============-->
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<div class="row">
-					<div class="col-md-4">
-					<a class="btn-block primary-btn circle e-large my-3 mx-2" href=""><b class="text-white">Pembina Pendamping</b></a>
-				</div>
-				<div class="col-md-4">
-					<a class="btn-block primary-btn circle e-large my-3 mx-2" href="<?= base_url('Daftar_NT') ?>"><b class="text-white">Peserta</b></a>
-				</div>
-				<div class="col-md-4">
-					<a class="btn-block primary-btn circle e-large my-3 mx-2" href=""><b class="text-white">Pimpinan Kontingen</b></a>
-				</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--================TOMBOL ANOTHER REGISTER ==============-->
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+      <div class="banner_inner d-flex align-items-center">
+        <!-- <div class="overlay"></div> -->
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div class="banner_content text-center">
+                <h2>Form Pendaftaran Napak Tilas Cabang</h2>
+                <div class="page_link">
+                  <a href="<?= base_url('Home') ?>">Home</a>
+                  <a href="<?= base_url('Daftar_NT') ?>">Daftar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End Home Banner Area =================-->
 
 	<!-- Start Align Area -->
 	<div class="whole-wrap">
@@ -173,13 +174,9 @@
 									</div>
 								</div>
 								<div class="col-md-6 row mt-2">
-									<div class="col-md-6 text-center">
-										<label> Petunjuk Pelaksanaan</label>
-										<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">SOON</a>
-									</div>
-									<div class="col-md-6 text-center">
-										<label> Petunjuk Teknis</label>
-										<a class="btn-block primary-btn circle e-large my-3 mx-2 text-white">SOON</a>
+									<div class="col-md-12 text-center">
+										<label> Petunjuk Pelaksanaan & Teknis</label>
+										<a class="btn-block primary-btn circle e-large mt-4 mx-2 text-white">SOON</a>
 									</div>
 								</div>
 							</div>

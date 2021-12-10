@@ -313,11 +313,11 @@
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-4">
-              <div class="single_event position-relative">
+              <div class="single_event">
                 <div class="event_thumb">
-                  <img src="<?= base_url() ?>assets/img/banner/e1.jpg" alt="" />
+                  <img  src="<?= base_url() ?>assets/img/banner/e1.jpg" alt="" />
                 </div>
-                <div class="event_details">
+                <div class="event_details mr-5">
                   <h5 class="text-white">Perkemahan Wirakarya Cabang (PWC)</h5>
                   <div class="d-flex mb-4">
                     <div class="date"><span>16-19</span> Des</div>
@@ -340,11 +340,11 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-4">
-              <div class="single_event position-relative">
+              <div class="single_event">
                 <div class="event_thumb">
-                  <img src="<?= base_url() ?>assets/img/banner/e1.jpg" alt="" />
+                  <img  src="<?= base_url() ?>assets/img/banner/e1.jpg" alt="" />
                 </div>
-                <div class="event_details">
+                <div class="event_details mr-5">
                   <h5 class="text-white">Napak Tilas Dewan Kerja Cabang (DKC)</h5>
                   <div class="d-flex mb-4">
                     <div class="date"><span>18</span> Des</div>
@@ -367,11 +367,11 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-4">
-              <div class="single_event position-relative">
+              <div class="single_event">
                 <div class="event_thumb">
-                  <img src="<?= base_url() ?>assets/img/banner/e1.jpg" alt="" />
+                  <img  src="<?= base_url() ?>assets/img/banner/e1.jpg" alt="" />
                 </div>
-                <div class="event_details">
+                <div class="event_details mr-5">
                   <h5 class="text-white">Gelar Senja Dewan Kerja Cabang (DKC)</h5>
                   <div class="d-flex mb-4">
                     <div class="date"><span>18</span> Des</div>

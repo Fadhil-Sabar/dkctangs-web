@@ -1103,21 +1103,327 @@ button:focus {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s; }
-  @media (max-width: 991px) {
-    .testi_item {
-      margin-bottom: 0px; } 
+
+    @media only screen and (max-width: 992px) {
+      .testi_item{
+        margin-bottom: 0px;
+      }
+
+    .testi_item .testi_text {
+      margin-top: 50px; }
+
+      .testi_item .sertif {
+        position: absolute; 
+        top:443px; 
+        right: 82px; 
+        width: 30%; 
+        height: auto; 
+        }
+
+        .testi_item .id{
+          position: absolute; 
+          top: 435px; 
+          left: 95px; 
+          font-size: 10pt;
+        }
+
+        .testi_item .nm{
+          position: absolute; 
+          top: 435px; 
+          left: 120px; 
+          font-size: 10pt;
+        }
+
+        .testi_item .rn{
+          position: absolute; 
+          top: 458px;
+          left: 95px; 
+          font-size: 10pt;
+        }
+
+        .testi_item .pk{
+          position: absolute; 
+          top: 480px; 
+          left: 95px; 
+          font-size: 10pt;
+        }
+
+        .testi_item .jk{
+          position: absolute; 
+          top: 503px; 
+          left: 95px; 
+          font-size: 10pt;
+        }
+
+        .testi_item .hp{
+          position: absolute; 
+          top: 525px; 
+          left: 95px; 
+          font-size: 10pt;
+        }
+
+        .testi_item .em{
+          position: absolute; 
+          top: 545px; 
+          left: 95px; 
+          font-size: 10pt;
+        }
     }
-  @media (max-width: 575px) {
+
+
+
+    @media only screen and (min-width: 786px){ 
+        .testi_item .sertif {
+        position: absolute; 
+        top: 350px; 
+        right: 95px; 
+        width: 35%; 
+        height: auto; 
+        }
+
+        .testi_item .id{
+          position: absolute; 
+          top: 367px; 
+          left: 115px; 
+          font-size: 25px;
+        }
+
+        .testi_item .nm{
+          position: absolute; 
+          top: 367px; 
+          left: 180px; 
+          font-size: 25px;
+        }
+
+        .testi_item .rn{
+          position: absolute; 
+          top: 412px;
+          left: 115px; 
+          font-size: 14pt;
+        }
+
+        .testi_item .pk{
+          position: absolute; 
+          top: 455px; 
+          left: 115px; 
+          font-size: 14pt;
+        }
+
+        .testi_item .jk{
+          position: absolute; 
+          top: 505px; 
+          left: 115px; 
+          font-size: 14pt;
+        }
+
+        .testi_item .hp{
+          position: absolute; 
+          top: 550px; 
+          left: 115px; 
+          font-size: 14pt;
+        }
+
+        .testi_item .em{
+          position: absolute; 
+          top: 592px; 
+          left: 115px; 
+          font-size: 14pt;
+        }
+    }
+
+
+  @media only screen and (max-width: 737px) {
     .testi_item {
-      padding: 30px 20px; } }
+      padding: 30px 20px; }
+
+      .testi_item .sertif {
+        position: absolute; 
+        top:406px; 
+        right: 63px; 
+        width: 30%; 
+        height: auto; 
+        }
+
+        .testi_item .id{
+          position: absolute; 
+          top: 410px; 
+          left: 63px; 
+          font-size: 10pt;
+        }
+
+        .testi_item .nm{
+          position: absolute; 
+          top: 410px; 
+          left: 90px; 
+          font-size: 10pt;
+        }
+
+        .testi_item .rn{
+          position: absolute; 
+          top: 430px;
+          left: 63px; 
+          font-size: 10pt;
+        }
+
+        .testi_item .pk{
+          position: absolute; 
+          top: 448px; 
+          left: 63px; 
+          font-size: 10pt;
+        }
+
+        .testi_item .jk{
+          position: absolute; 
+          top: 465px; 
+          left: 63px; 
+          font-size: 10pt;
+        }
+
+        .testi_item .hp{
+          position: absolute; 
+          top: 483px; 
+          left: 63px; 
+          font-size: 10pt;
+        }
+
+        .testi_item .em{
+          position: absolute; 
+          top: 501px; 
+          left: 63px; 
+          font-size: 10pt;
+        } 
+  }
+
+  @media only screen and (max-width: 626px) {
+    .testi_item {
+      padding: 30px 20px; }
+
+      .testi_item .sertif {
+        position: absolute; 
+        top: 406px; 
+        right: 63px; 
+        width: 30%; 
+        height: auto; 
+        }
+
+        .testi_item .id{
+          position: absolute; 
+          top: 410px; 
+          left: 63px; 
+          font-size: 9pt;
+        }
+
+        .testi_item .nm{
+          position: absolute; 
+          top: 410px; 
+          left: 90px; 
+          font-size: 9pt;
+        }
+
+        .testi_item .rn{
+          position: absolute; 
+          top: 430px;
+          left: 63px; 
+          font-size: 9pt;
+        }
+
+        .testi_item .pk{
+          position: absolute; 
+          top: 448px; 
+          left: 63px; 
+          font-size: 9pt;
+        }
+
+        .testi_item .jk{
+          position: absolute; 
+          top: 465px; 
+          left: 63px; 
+          font-size: 9pt;
+        }
+
+        .testi_item .hp{
+          position: absolute; 
+          top: 483px; 
+          left: 63px; 
+          font-size: 9pt;
+        }
+
+        .testi_item .em{
+          position: absolute; 
+          top: 500px; 
+          left: 63px; 
+          font-size: 9pt;
+        } 
+  }
+
+  @media only screen and (max-width: 396px) {
+    .testi_item {
+      padding: 30px 20px; }
+
+      .testi_item .sertif {
+        position: absolute; 
+        top: 406px; 
+        right: 63px; 
+        width: 30%; 
+        height: auto; 
+        }
+
+        .testi_item .id{
+          position: absolute; 
+          top: 410px; 
+          left: 63px; 
+          font-size: 9pt;
+        }
+
+        .testi_item .nm{
+          position: absolute; 
+          top: 410px; 
+          left: 90px; 
+          font-size: 9pt;
+        }
+
+        .testi_item .rn{
+          position: absolute; 
+          top: 430px;
+          left: 63px; 
+          font-size: 9pt;
+        }
+
+        .testi_item .pk{
+          position: absolute; 
+          top: 448px; 
+          left: 63px; 
+          font-size: 9pt;
+        }
+
+        .testi_item .jk{
+          position: absolute; 
+          top: 465px; 
+          left: 63px; 
+          font-size: 9pt;
+        }
+
+        .testi_item .hp{
+          position: absolute; 
+          top: 483px; 
+          left: 63px; 
+          font-size: 9pt;
+        }
+
+        .testi_item .em{
+          position: absolute; 
+          top: 500px; 
+          left: 63px; 
+          font-size: 9pt;
+        } 
+  }
+
+
   .testi_item img {
     border-radius: 5px; }
   .testi_item .col-lg-8 {
     vertical-align: middle;
     align-self: center; }
-  @media (max-width: 991px) {
-    .testi_item .testi_text {
-      margin-top: 50px; } }
   .testi_item .testi_text h4 {
     font-size: 20px;
     margin-bottom: 15px;
