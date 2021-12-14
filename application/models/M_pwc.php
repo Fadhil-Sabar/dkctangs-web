@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_pwc extends CI_Model
 {
-    public function tambah_data_pwc($filename)
+    public function tambah_data_pwc($data)
     {
         $data = [
             'nama_lengkap' => $this->input->post('nama_lengkap', true),
@@ -12,14 +12,14 @@ class M_pwc extends CI_Model
             'pangkalan' => $this->input->post('pangkalan', true),
             'ranting' => $this->input->post('ranting', true),
             'tempat_lahir' => $this->input->post('tempat_lahir', true),
-            'tanggal_lahir' => $this->input->post('tanggal_lahir',true),
+            'tanggal_lahir' => $this->input->post('tanggal_lahir', true),
             'penyakit' => $this->input->post('penyakit', true),
             'email' => $this->input->post('email', true),
-            'sertifikat_vaksin' => $filename,
-            'surat_kesehatan' => $filename,
-            'surat_mandat' => $filename
+            'sertifikat_vaksin' => $data['sertif_vaksin'],
+            'surat_kesehatan' => $data['surat_sehat'],
+            'surat_mandat' => $data['surat_mandat']
         ];
-        
+
         $this->db->insert('db_peserta_pwc', $data);
         return $this->db->insert_id();
     }
