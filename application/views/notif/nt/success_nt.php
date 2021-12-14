@@ -159,11 +159,11 @@
                   <div class="col-md-6">
                     <div class="container">
                       <p class="text-white">Sebagai       : <b><?= $NT[0]['jenis_peserta'] ?></b></p>
-                      <p class="text-white">Id Peserta    : <b><?= $NT[0]['id_peserta_nt'] ?></b></p>
+                      <p class="text-white">Id Peserta    : <b><?= $NT[0]['id_peserta_tatil'] ?></b></p>
                       <p class="text-white">Nama Peserta  : <b><?= $NT[0]['nama_lengkap'] ?></b></p>
                       <p class="text-white">Ranting       : <b><?= $NT[0]['ranting'] ?></b></p>
                       <p class="text-white">Pangkalan     : <b><?= $NT[0]['pangkalan'] ?></b></p>
-                      <p class="text-white">Jenis Kelamin : <?php if ($NT[0]['jenis_kelamin']) {echo "<b>Laki Laki</b>";} else {echo "<b>Perempuan</b>";} ?></p>
+                      <p class="text-white">Jenis Kelamin : <?php if ($NT[0]['jenis_kelamin'] == 1) {echo "<b>Laki Laki</b>";} else {echo "<b>Perempuan</b>";} ?></p>
                       <p class="text-white">No Telepon    : <b><?= $NT[0]['no_hp'] ?></b></p>
                       <p class="text-white">Email         : <b><?= $NT[0]['email'] ?></b></p>
                     </div>

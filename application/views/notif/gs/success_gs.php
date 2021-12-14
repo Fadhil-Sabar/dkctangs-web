@@ -163,7 +163,7 @@
                       <p class="text-white">Nama Peserta  : <b><?= $GS[0]['nama_lengkap'] ?></b></p>
                       <p class="text-white">Ranting       : <b><?= $GS[0]['ranting'] ?></b></p>
                       <p class="text-white">Pangkalan     : <b><?= $GS[0]['pangkalan'] ?></b></p>
-                      <p class="text-white">Jenis Kelamin : <?php if ($GS[0]['jenis_kelamin']) {echo "<b>Laki Laki</b>";} else {echo "<b>Perempuan</b>";} ?></p>
+                      <p class="text-white">Jenis Kelamin : <?php if ($GS[0]['jenis_kelamin'] == 1) {echo "<b>Laki Laki</b>";} else {echo "<b>Perempuan</b>";} ?></p>
                       <p class="text-white">No Telepon    : <b><?= $GS[0]['no_hp'] ?></b></p>
                       <p class="text-white">Email         : <b><?= $GS[0]['email'] ?></b></p>
                     </div>

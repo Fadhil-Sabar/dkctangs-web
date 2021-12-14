@@ -27,6 +27,9 @@ class DaftarPWC extends CI_Controller
 
     public function add_pwc()
     {
+        $sertifikat_vaksin = '';
+        $surat_kesehatan = '';
+        $surat_mandat = '';
         $data['active'] = true;
         // set validation rules
         $this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required');
@@ -60,12 +63,13 @@ class DaftarPWC extends CI_Controller
                     $this->load->view('daftar_pwc', $error);
                 } else {
                     $data = array('image' => $this->upload->data());
+                    $sertifikat_vaksin = $this->upload->data('file_name');
                 }
             }
         }
 
         if (empty($_FILES['surat_kesehatan']['name'])) {
-            $this->form_validation->set_rules('surat_kesehatan', 'Surat Kesehatan', 'required');
+            $this->form_validation->set_rules('surat_kesehatan', 'Surat Kesehatan');
         } else {
             if ($this->input->post('TambahPWC')) {
 
@@ -85,6 +89,7 @@ class DaftarPWC extends CI_Controller
                     $this->load->view('daftar_pwc', $error);
                 } else {
                     $data = array('image' => $this->upload->data());
+                    $surat_kesehatan = $this->upload->data('file_name');
                 }
             }
         }
@@ -111,6 +116,7 @@ class DaftarPWC extends CI_Controller
                     $this->load->view('daftar_pwc', $error);
                 } else {
                     $data = array('image' => $this->upload->data());
+                    $surat_mandat = $this->upload->data('file_name');
                 }
             }
         }
@@ -137,8 +143,10 @@ class DaftarPWC extends CI_Controller
                     $this->load->view('daftar_pwc', $error);
                 } else {
                     $data = array('image' => $this->upload->data());
-                    $current_id = $this->pwc->tambah_data_pwc($this->upload->data('file_name'));
-                    redirect(base_url('Success_PWC/' . $current_id));
+                    var_dump($sertifikat_vaksin, $surat_kesehatan, $surat_mandat);
+                    die();
+                    // $current_id = $this->pwc->tambah_data_pwc($this->upload->data($sertifikat_vaksin, $surat_kesehatan, $surat_mandat));
+                    // redirect(base_url('Success_PWC/' . $current_id));
                 }
             }
         }

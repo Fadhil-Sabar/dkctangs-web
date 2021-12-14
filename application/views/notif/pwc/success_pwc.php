@@ -148,7 +148,7 @@
                       <p class="text-white">Nama Peserta  : <b><?= $PWC[0]['nama_lengkap'] ?></b></p>
                       <p class="text-white">Ranting       : <b><?= $PWC[0]['ranting'] ?></b></p>
                       <p class="text-white">Pangkalan     : <b><?= $PWC[0]['pangkalan'] ?></b></p>
-                      <p class="text-white">Jenis Kelamin : <?php if ($PWC[0]['jenis_kelamin']) {echo "<b>Laki Laki</b>";} else {echo "<b>Perempuan</b>";} ?></p>
+                      <p class="text-white">Jenis Kelamin : <?php if ($PWC[0]['jenis_kelamin'] == 1) {echo "<b>Laki Laki</b>";} else {echo "<b>Perempuan</b>";} ?></p>
                       <p class="text-white">No Telepon    : <b><?= $PWC[0]['no_hp'] ?></b></p>
                       <p class="text-white">Email         : <b><?= $PWC[0]['email'] ?></b></p>
                     </div>

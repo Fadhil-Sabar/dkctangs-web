@@ -176,9 +176,9 @@
 								<div class="col-md-6 row mt-2">
 									<div class="col-md-12 text-center">
 										<label> Petunjuk Pelaksanaan & Teknis</label>
-										<a class="btn-block primary-btn circle e-large mt-4 mx-2 text-white">SOON</a>
+										<a href="https://sg.docs.wps.com/l/sINnVn_0h25bcjQY" class="btn-block primary-btn circle e-large mt-4 mx-2 text-white">DOWNLOAD JUKLAK JUKNIS</a>
 									</div>
-								</div>							</div>
+								</div>
 						</div>
 						<div class="row">
 							<div class="col-md-7">
@@ -190,15 +190,15 @@
 									</div>
 									<div class="container">
 										<div class="row">
-											<div class="form-group col-md-6">
-												<div class="input-group-icon">
+											<div class="col-md-6">
+												<div class="form-group input-group-icon">
 													<div class="icon"><i class="fas fa-user" aria-hidden="true"></i></div>
 													<div class="form-select" id="default-select">
 														<select name="jenis_peserta" class="custom-select form-control">
 															<option selected disabled>Jenis Peserta</option>
-															<option value="Peserta" <?= set_select('jenis_kelamin', 'Peserta') ?>>PESERTA</option>
-															<option value="Pembina Pendamping" <?= set_select('jenis_kelamin', 'Pembina Pendamping') ?>>PEMBINA PENDAMPING</option>
-															<option value="Pimpinan Kontingen" <?= set_select('jenis_kelamin', 'Pimpinan Kontingen') ?>>PIMPINAN KONTINGEN</option>
+															<option value="Peserta" <?= set_select('jenis_peserta', 'Peserta') ?>>PESERTA</option>
+															<option value="Pembina Pendamping" <?= set_select('jenis_peserta', 'Pembina Pendamping') ?>>PEMBINA PENDAMPING</option>
+															<option value="Pimpinan Kontingen" <?= set_select('jenis_peserta', 'Pimpinan Kontingen') ?>>PIMPINAN KONTINGEN</option>
 														</select>
 													</div>
 												</div>
@@ -263,7 +263,7 @@
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
-													<input type="number" class="form-control" name="no_hp" placeholder="Nomor Telepon" style="text-transform: uppercase;" <?php if (form_error('no_hp')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('no_hp'); ?>">
+													<input type="number" class="form-control" name="no_hp" minlength="10" placeholder="Nomor Telepon" style="text-transform: uppercase;" <?php if (form_error('no_hp')) echo 'is-invalid'; ?> class="single-input-primary" value="<?= set_value('no_hp'); ?>">
 												</div>
 											</div>
 											<div class="col-md-6">
@@ -279,7 +279,7 @@
 									</div>
 							</div>
 							<div class="col-md-5">
-								<img class="img-fluid col-lg-12 col-md-6" src="<?= base_url() ?>assets/img/banner/form-3.png">
+								<img class="img-fluid col-lg-12 col-md-6" src="<?= base_url() ?>assets/img/banner/form-2.png">
 							</div>
 						</div>
 						<div class="row">
@@ -322,7 +322,7 @@
 							<div class="col-md-4">
 								<div class="contain text-center pt-2">
 									<div>
-										<label class="text-white"><b class="text-danger">* </b>Upload Surat Kesehatan</label>
+										<label class="text-white">(Opsional)Upload Surat Kesehatan</label>
 										<input id="file-upload" type="file" name="surat_kesehatan" accept="image/*" />
 										<?php if (form_error('surat_kesehatan')) : ?>
 											<div class="text-danger mt-2">

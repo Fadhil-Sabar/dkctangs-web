@@ -71,3 +71,12 @@ $route['Failed_NT'] = 'DaftarNT/failed_nt';
 $route['Daftar_GS'] = 'DaftarGelas/daftar_gs';
 $route['Success_GS/(:num)'] = 'DaftarGelas/success_gs/$1';
 $route['Failed_GS'] = 'DaftarGelas/failed_gs';
+
+
+//ADMIN PAGE DIBAWAH INI 
+$route['Login'] = 'Admin/Auth/Auth/masuk';
+$route['Logout'] = 'Admin/Auth/Auth/keluar';
+$route['Forgot-Pass'] = 'Admin/Auth/Auth/lupa_pass';
+$route['Admin'] = "Admin/Admin"; //INI CONTROLLER PWC JUGA
+$route['Admin_Tatil'] = "Admin/Admin/nt_admin";
+$route['Admin_Gelas'] = "Admin/Admin/gs_admin";

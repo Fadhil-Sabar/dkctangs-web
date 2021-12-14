@@ -65,7 +65,7 @@ class DaftarGelas extends CI_Controller
         }
 
         if (empty($_FILES['surat_kesehatan']['name'])) {
-            $this->form_validation->set_rules('surat_kesehatan', 'Surat Kesehatan', 'required');
+            $this->form_validation->set_rules('surat_kesehatan', 'Surat Kesehatan');
         } else {
             if ($this->input->post('TambahGS')) {
 
