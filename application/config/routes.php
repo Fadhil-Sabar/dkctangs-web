@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -80,3 +80,8 @@ $route['Forgot-Pass'] = 'Admin/Auth/Auth/lupa_pass';
 $route['Admin'] = "Admin/Admin"; //INI CONTROLLER PWC JUGA
 $route['Admin_Tatil'] = "Admin/Admin/nt_admin";
 $route['Admin_Gelas'] = "Admin/Admin/gs_admin";
+
+$route['Admin_Pramuka'] = "Admin/Admin/pmk_admin";
+$route['Add_Pmk'] = "Admin/Process_pmk/tambah_data_pmk";
+$route['Edit-pmk/(:num)'] = "Admin/Process_pmk/Edit_pmk/$1";
+$route['Delete-pmk/(:num)'] = "Admin/Process_pmk/hapus_pmk/$1";

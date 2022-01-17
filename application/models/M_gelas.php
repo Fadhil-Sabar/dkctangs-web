@@ -13,7 +13,7 @@ class M_gelas extends CI_Model
             'pangkalan' => $this->input->post('pangkalan', true),
             'ranting' => $this->input->post('ranting', true),
             'tempat_lahir' => $this->input->post('tempat_lahir', true),
-            'tanggal_lahir' => $this->input->post('tanggal_lahir',true),
+            'tanggal_lahir' => $this->input->post('tanggal_lahir', true),
             'penyakit' => $this->input->post('penyakit', true),
             'email' => $this->input->post('email', true),
             'sertifikat_vaksin' => $filename,
