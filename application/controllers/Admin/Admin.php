@@ -53,4 +53,21 @@ class Admin extends CI_Controller
     $this->load->view('admin-page/pramuka/pmk_admin', $data);
     $this->load->view('_partial/foot-dash');
   }
+
+  public function berita()
+  {
+    // Blocking adm klinik
+    // if ($this->session->userdata('level') === '1' || $this->session->userdata('level') === '3') {
+    $this->load->model('M_news', 'news');
+
+    $data['title']   = 'Berita';
+    $data['news']   = $this->news->get_all_news();
+
+    $this->load->view('_partial/head-dash', $data);
+    $this->load->view('admin-page/pramuka/berita_admin', $data);
+    $this->load->view('_partial/foot-dash');
+    // } else {
+    //   return redirect(base_url('Error'));
+    // }
+  }
 }

@@ -17,7 +17,7 @@ class M_pmk extends CI_Model
             'tingkatan' => $this->input->post('Tingkatan', true),
         ];
 
-        $this->db->insert('db_pmk', $data);
+        $this->db->insert('tb_pmk', $data);
     }
 
     public function update($id)
@@ -36,21 +36,21 @@ class M_pmk extends CI_Model
 
         $this->db->set($data);
         $this->db->where('id', $id);
-        $this->db->update('db_pmk');
+        $this->db->update('tb_pmk');
     }
 
     public function hapus_data_pmk($id)
     {
-        $this->db->delete('db_pmk', array('id' => $id));
+        $this->db->delete('tb_pmk', array('id' => $id));
     }
 
     public function get_all_pmk()
     {
-        return $this->db->get('db_pmk')->result();
+        return $this->db->get('tb_pmk')->result();
     }
 
     public function get_pmk_by_id($id)
     {
-        return $this->db->get_where('db_pmk', array('id' => $id))->row();
+        return $this->db->get_where('tb_pmk', array('id' => $id))->row();
     }
 }

@@ -107,7 +107,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?= base_url('Admin_Berita') ?>" class="nav-link">
+                  <a href="<?= base_url('News-Page') ?>" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>CRUD Berita</p>
                   </a>

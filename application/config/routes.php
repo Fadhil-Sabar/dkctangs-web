@@ -85,3 +85,12 @@ $route['Admin_Pramuka'] = "Admin/Admin/pmk_admin";
 $route['Add_Pmk'] = "Admin/Process_pmk/tambah_data_pmk";
 $route['Edit-pmk/(:num)'] = "Admin/Process_pmk/Edit_pmk/$1";
 $route['Delete-pmk/(:num)'] = "Admin/Process_pmk/hapus_pmk/$1";
+
+// Route news
+$route['News-Page'] = 'Admin/Admin/berita';
+$route['Add-News-Page'] = 'Admin/Process_news/tambah_berita';
+$route['Edit-News/(:num)'] = 'Admin/Process_news/edit_berita/$1';
+$route['Delete-News/(:num)'] = 'Admin/Process_news/hapus_berita/$1';
+$route['Detail-News/(:num)'] = 'Admin/Process_news/detail_berita/$1';
+$route['Publish-News/(:num)'] = 'Admin/Process_news/publish_berita/$1';
+$route['Draft-News/(:num)'] = 'Admin/Process_news/draft_berita/$1';
