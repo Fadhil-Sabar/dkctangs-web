@@ -88,7 +88,16 @@
                                 </div>
                                 <div class="form-group mb-4">
                                     <label>Kecamatan <i class="text-danger">*</i></label>
-                                    <input type="text" class="form-control <?php if (form_error('Kecamatan')) echo 'is-invalid'; ?>" name="Kecamatan" placeholder="Kecamatan" value="<?= set_value('Kecamatan'); ?>">
+                                    <select name="Kecamatan" class="custom-select form-control <?php if (form_error('Kecamatan')) echo 'is-invalid'; ?>">
+                                        <option selected disabled>Pilih Kecamatan</option>
+                                        <option value="Ciputat" <?= set_select('Kecamatan', 'Ciputat') ?>>Ciputat</option>
+                                        <option value="Ciputat Timur" <?= set_select('Kecamatan', 'Ciputat Timur') ?>>Ciputat Timur</option>
+                                        <option value="Serpong" <?= set_select('Kecamatan', 'Serpong') ?>>Serpong</option>
+                                        <option value="Serpong Utara" <?= set_select('Kecamatan', 'Serpong Utara') ?>>Serpong Utara</option>
+                                        <option value="Pondok Aren" <?= set_select('Kecamatan', 'Pondok Aren') ?>>Pondok Aren</option>
+                                        <option value="Pamulang" <?= set_select('Kecamatan', 'Pamulang') ?>>Pamulang</option>
+                                        <option value="Setu" <?= set_select('Kecamatan', 'Setu') ?>>Setu</option>
+                                    </select>
                                     <div class="text-danger mt-2">
                                         <?= form_error('Kecamatan'); ?>
                                     </div>

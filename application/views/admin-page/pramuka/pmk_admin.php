@@ -27,7 +27,7 @@
                               <div class="card-header border-transparent bg-dark d-flex align-items-center">
                                   <h2 class="card-title text-bold text-lg">List Pramuka</h2>
                                   <div class="card-tools ml-auto">
-                                      <a href="<?= base_url('Add_Pmk') ?>" class="btn btn-sm btn-primary"><i class="fa fa-plus pr-2"></i> Tambah Dokter</a>
+                                      <a href="<?= base_url('Add_Pmk') ?>" class="btn btn-sm btn-primary"><i class="fa fa-plus pr-2"></i> Tambah Data</a>
                                   </div>
                               </div>
                           </div>

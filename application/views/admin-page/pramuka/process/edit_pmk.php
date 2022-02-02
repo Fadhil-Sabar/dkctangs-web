@@ -88,7 +88,16 @@
                                 </div>
                                 <div class="form-group mb-4">
                                     <label>Kecamatan <i class="text-danger">*</i></label>
-                                    <input type="text" class="form-control <?php if (form_error('Kecamatan')) echo 'is-invalid'; ?>" name="Kecamatan" placeholder="Kecamatan" value="<?= set_value('Kecamatan', $pmk->kecamatan); ?>">
+                                    <select name="Kecamatan" class="custom-select form-control <?php if (form_error('Kecamatan')) echo 'is-invalid'; ?>">
+                                        <option selected disabled>Pilih Kecamatan</option>
+                                        <option value="Ciputat" <?php ($pmk->kecamatan === 'Ciputat') ? print 'selected' : print set_select('Kecamatan', 'Ciputat') ?>>Ciputat</option>
+                                        <option value="Ciputat Timur" <?php ($pmk->kecamatan === 'Ciputat Timur') ? print 'selected' : print set_select('Kecamatan', 'Ciputat Timur') ?>>Ciputat Timur</option>
+                                        <option value="Serpong" <?php ($pmk->kecamatan === 'Serpong') ? print 'selected' : print set_select('Kecamatan', 'Serpong') ?>>Serpong</option>
+                                        <option value="Serpong Utara" <?php ($pmk->kecamatan === 'Serpong Utara') ? print 'selected' : print set_select('Kecamatan', 'Serpong Utara') ?>>Serpong Utara</option>
+                                        <option value="Pondok Aren" <?php ($pmk->kecamatan === 'Pondok Aren') ? print 'selected' : print set_select('Kecamatan', 'Pondok Aren') ?>>Pondok Aren</option>
+                                        <option value="Pamulang" <?php ($pmk->kecamatan === 'Pamulang') ? print 'selected' : print set_select('Kecamatan', 'Pamulang') ?>>Pamulang</option>
+                                        <option value="Setu" <?php ($pmk->kecamatan === 'Setu') ? print 'selected' : print set_select('Kecamatan', 'Setu') ?>>Setu</option>
+                                    </select>
                                     <div class="text-danger mt-2">
                                         <?= form_error('Kecamatan'); ?>
                                     </div>
