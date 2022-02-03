@@ -13,7 +13,13 @@ class Admin extends CI_Controller
   //   }
   // }
 
-  public function index()
+  public function index(){
+    $this->load->view('_partial/head-dash');
+    $this->load->view('_partial/navbar-dash');
+    $this->load->view('_partial/foot-dash');
+  }
+
+  public function admin_page()
   {
 
     $this->db->where('kecamatan', 'Ciputat');
@@ -84,6 +90,13 @@ class Admin extends CI_Controller
     $this->load->view('_partial/foot-dash');
   }
 
+  public function data_kegiatan()
+  {
+    $this->load->view('_partial/head-dash');
+    $this->load->view('admin-page/data_kegiatan');
+    $this->load->view('_partial/foot-dash');
+  }
+
 
   public function pwc_admin()
   {
@@ -136,23 +149,6 @@ class Admin extends CI_Controller
 
     $this->load->view('_partial/head-dash', $data);
     $this->load->view('admin-page/pramuka/berita_admin', $data);
-    $this->load->view('_partial/foot-dash');
-    // } else {
-    //   return redirect(base_url('Error'));
-    // }
-  }
-
-  public function kegiatan()
-  {
-    // Blocking adm klinik
-    // if ($this->session->userdata('level') === '1' || $this->session->userdata('level') === '3') {
-    $this->load->model('M_event', 'event');
-
-    $data['title']   = 'Kegiatan';
-    $data['events'] = $this->event->get_all_kegiatan();
-
-    $this->load->view('_partial/head-dash', $data);
-    $this->load->view('admin-page/pramuka/events', $data);
     $this->load->view('_partial/foot-dash');
     // } else {
     //   return redirect(base_url('Error'));

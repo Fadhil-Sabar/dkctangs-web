@@ -1,9 +1,8 @@
- <footer class="main-footer">
-   <div class="float-right d-none d-sm-block">
-     <b>Version</b> 3.1.0
-   </div>
-   <strong>Copyright &copy; <span id="years"></span> <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
- </footer>
+  <footer class="main-footer dark-mode">
+    <strong>Copyright Tugas &copy;<script>var CurrentYear = new Date().getFullYear()
+            document.write(CurrentYear)</script> <a href="https://www.linkedin.com/in/rafli5876/">Ananda Rafli Juliansyah</a>.</strong>
+    All rights reserved.
+  </footer>
 
  <!-- Control Sidebar -->
  <aside class="control-sidebar control-sidebar-dark">
@@ -14,6 +13,11 @@
  <!-- ./wrapper -->
 
  <!-- jQuery -->
+ <script src="<?= base_url() ?>dashboard/plugins/jquery-ui/jquery-ui.min.js"></script>
+ <script>
+  $.widget.bridge('uibutton', $.ui.button)
+ </script>
+ <script src="<?= base_url() ?>dashboard/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
  <script src="<?= base_url() ?>dashboard/plugins/jquery/jquery.min.js"></script>
  <!-- Bootstrap 4 -->
  <script src="<?= base_url() ?>dashboard/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -76,6 +80,14 @@
 
     });
   </script>
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="dist/js/adminlte.js"></script>
 
  </body>
 
