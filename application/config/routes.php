@@ -95,4 +95,3 @@ $route['Delete-News/(:num)'] = 'Admin/Process_news/hapus_berita/$1';
 $route['Detail-News/(:num)'] = 'Admin/Process_news/detail_berita/$1';
 $route['Publish-News/(:num)'] = 'Admin/Process_news/publish_berita/$1';
 $route['Draft-News/(:num)'] = 'Admin/Process_news/draft_berita/$1';
-
