@@ -19,7 +19,7 @@ class Admin extends CI_Controller
     $data['pmks'] = $this->pmk->get_all_pmk();
 
     $this->load->view('_partial/head-dash');
-    $this->load->view('admin-page/admin',$data);
+    $this->load->view('admin-page/admin', $data);
     $this->load->view('_partial/foot-dash');
   }
 
@@ -96,5 +96,12 @@ class Admin extends CI_Controller
     // } else {
     //   return redirect(base_url('Error'));
     // }
+  }
+
+  public function dataKegiatan()
+  {
+    $this->load->view('_partial/head-dash');
+    $this->load->view('admin-page/kegiatan');
+    $this->load->view('_partial/foot-dash');
   }
 }

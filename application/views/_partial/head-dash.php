@@ -63,10 +63,10 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-                  <a href="<?= base_url('Admin-Page') ?>" class="nav-link">
-                  <i class="fas fa-tachometer-alt nav-icon"></i>
-                  <p>Dashboard</p>
-                </a>
+              <a href="<?= base_url('Admin-Page') ?>" class="nav-link">
+                <i class="fas fa-tachometer-alt nav-icon"></i>
+                <p>Dashboard</p>
+              </a>
             </li>
             <li class="nav-item menu-open">
               <a href="#" class="nav-link">
@@ -78,21 +78,9 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="<?= base_url('Admin_PWC') ?>" class="nav-link">
+                  <a href="<?= base_url('DataKegiatan') ?>" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>PWC 2021</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="<?= base_url('Admin_Tatil') ?>" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Napak Tilas 2021</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="<?= base_url('Admin_Gelas') ?>" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Gelar Senja 2021</p>
+                    <p>Data Kegiatan</p>
                   </a>
                 </li>
               </ul>
