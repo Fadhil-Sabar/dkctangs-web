@@ -70,6 +70,8 @@
                                         <?= form_error('No_Hp'); ?>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group mb-4">
                                     <label>Email <i class="text-danger">*</i></label>
                                     <input type="text" class="form-control <?php if (form_error('Email')) echo 'is-invalid'; ?>" name="Email" placeholder="Email" value="<?= set_value('Email'); ?>">
@@ -77,8 +79,6 @@
                                         <?= form_error('Email'); ?>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group mb-4">
                                     <label>Alamat <i class="text-danger">*</i></label>
                                     <textarea class="form-control <?php if (form_error('Alamat')) echo 'is-invalid'; ?>" name="Alamat" rows="5" placeholder="Alamat"><?= set_value('Alamat'); ?></textarea>

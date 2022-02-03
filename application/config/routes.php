@@ -98,3 +98,10 @@ $route['Draft-News/(:num)'] = 'Admin/Process_news/draft_berita/$1';
 // routes chart
 $route['ChartKecamatan'] = 'Admin/Chart/chartKecamatan';
 $route['ChartJk'] = 'Admin/Chart/chartJk';
+
+// Route event
+$route['Admin_Kegiatan'] = 'Admin/Admin/kegiatan';
+$route['Add-Event-Page'] = 'Admin/Process_event/tambah_kegiatan';
+$route['Edit-Event/(:num)'] = 'Admin/Process_event/edit_kegiatan/$1';
+$route['Delete-Event/(:num)'] = 'Admin/Process_event/hapus_kegiatan/$1';
+$route['Detail-Event/(:num)'] = 'Admin/Process_event/detail_kegiatan/$1';
