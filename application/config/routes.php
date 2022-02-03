@@ -96,6 +96,3 @@ $route['Detail-News/(:num)'] = 'Admin/Process_news/detail_berita/$1';
 $route['Publish-News/(:num)'] = 'Admin/Process_news/publish_berita/$1';
 $route['Draft-News/(:num)'] = 'Admin/Process_news/draft_berita/$1';
 
-// routes chart
-$route['ChartKecamatan'] = 'Admin/Chart/chartKecamatan';
-$route['ChartJk'] = 'Admin/Chart/chartJk';
