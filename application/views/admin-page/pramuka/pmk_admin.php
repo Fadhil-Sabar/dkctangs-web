@@ -38,7 +38,6 @@
                                       <thead>
                                           <tr>
                                               <th width="10px">No.</th>
-                                              <th class="d-none">Kode Anak</th>
                                               <th>Nama</th>
                                               <th>Pangkalan</th>
                                               <th>Tanggal Lahir</th>

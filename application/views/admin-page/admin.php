@@ -31,42 +31,63 @@
                 <div class="table-responsive">
                   <table id="example1" class="table table-hover">
                     <thead class="text-center">
-                    <tr>
-                      <th>Id Peserta</th>
-                      <th>Jenis Peserta</th>
-                      <th>Nama Lengkap</th>
-                      <th>Nomor Telepon</th>
-                      <th>Jenis Kelamin</th>
-                      <th>Pangkalan</th>
-                      <th>Ranting</th>
-                      <th>Tempat Lahir</th>
-                      <th>Tanggal Lahir</th>
-                      <th>Email</th>
-                      <th>Penyakit</th>
-                      <th>Sertifikat Vaksin</th>
-                      <th>Surat Kesehatan</th>
-                      <th>Surat Mandat</th>
-                    </tr>
+                      <tr>
+                        <th>No.</th>
+                        <th>Nama</th>
+                        <th>Pangkalan</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Jenis Kelamin</th>
+                        <th>No. Hp</th>
+                        <th>Email</th>
+                        <th>Alamat</th>
+                        <th>Kecamatan</th>
+                        <th>Tingkatan</th>
+                        <th>Aksi</th>
+                      </tr>
                     </thead>
                     <tbody>
-                    <?php 
-                    foreach ($PWC as $p) :
-                    ?>
+                      <?php
+                      $no = 1;
+                      foreach ($pmks as $p) :
+                      ?>
                     <tr>
-                      <td><?= $p->id_peserta_pwc ?></td>
-                      <td><?= $p->jenis_peserta ?></td>
-                      <td><?= $p->nama_lengkap ?></td>
-                      <td><?= $p->no_hp ?></td>
-                      <td><?= $p->jenis_kelamin ?></td>
-                      <td><?= $p->pangkalan ?></td>
-                      <td><?= $p->ranting ?></td>
-                      <td><?= $p->tempat_lahir ?></td>
-                      <td><?= $p->tanggal_lahir ?></td>
-                      <td><?= $p->email ?></td>
-                      <td><?= $p->penyakit ?></td>
-                      <td><a class="image-popup" href="<?= base_url() ?>peserta/images/pwc2021/sertifikat_vaksin/<?= $p->sertifikat_vaksin ?>"><img width="120" class="img-responsive" src="<?= base_url() ?>peserta/images/pwc2021/sertifikat_vaksin/<?= $p->sertifikat_vaksin ?>" /></a></td>
-                      <td><a class="image-popup" href="<?= base_url() ?>peserta/images/pwc2021/surat_kesehatan/<?= $p->surat_kesehatan ?>"><img width="120" class="img-responsive" src="<?= base_url() ?>peserta/images/pwc2021/surat_kesehatan/<?= $p->surat_kesehatan ?>" /></a></td>
-                      <td><a class="image-popup" href="<?= base_url() ?>peserta/images/pwc2021/surat_mandat/<?= $p->surat_mandat ?>"><img width="120" class="img-responsive" src="<?= base_url() ?>peserta/images/pwc2021/surat_mandat/<?= $p->surat_mandat ?>" /></a></td>
+                        <td><?= $no++ ?></td>
+                        <td><?= $p->nama ?></td>
+                        <td><?= $p->pangkalan ?></td>
+                        <td><?= $p->tgl_lahir ?></td>
+                        <td><?= $p->jenis_kelamin ?></td>
+                        <td><?= $p->no_hp ?></td>
+                        <td><?= $p->email ?></td>
+                        <td><?= $p->alamat ?></td>
+                        <td><?= $p->kecamatan ?></td>
+                        <td><?= $p->tingkatan ?></td>
+                        <td>
+                            <div class="btn-group">
+                                <a href="<?= base_url('Edit-pmk/' . $p->id); ?>" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
+                                <a href="<?= base_url('Delete-pmk/' . $p->id); ?>" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deletePmk<?= $p->id ?>">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                        <!-- delete doctor Modal-->
+                        <div class="modal fade" id="deletePmk<?= $p->id ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Apakah anda yakin?</h5>
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">Anda yakin ingin menghapus data ini beserta data terkait? <p class="text-danger d-inline"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Kembali</button>
+                                        <a href="<?= base_url('Delete-pmk/' . $p->id); ?>" class="btn btn-danger">Ya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </tr>
                     <?php endforeach; ?>
                     </tbody>
