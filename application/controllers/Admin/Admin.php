@@ -15,6 +15,67 @@ class Admin extends CI_Controller
 
   public function index()
   {
+
+    $this->db->where('kecamatan', 'Ciputat');
+    $this->db->from('tb_pmk');
+    $ciputat = $this->db->count_all_results();
+
+    $this->db->where('kecamatan', 'Ciputat Timur');
+    $this->db->from('tb_pmk');
+    $ciptim = $this->db->count_all_results();
+
+    $this->db->where('kecamatan', 'Serpong');
+    $this->db->from('tb_pmk');
+    $serpong = $this->db->count_all_results();
+
+    $this->db->where('kecamatan', 'Serpong Utara');
+    $this->db->from('tb_pmk');
+    $serut = $this->db->count_all_results();
+
+    $this->db->like('kecamatan', 'Pondok Aren');
+    $this->db->from('tb_pmk');
+    $ponren = $this->db->count_all_results();
+
+    $this->db->like('kecamatan', 'Pamulang');
+    $this->db->from('tb_pmk');
+    $pamulang = $this->db->count_all_results();
+
+    $this->db->like('kecamatan', 'Setu');
+    $this->db->from('tb_pmk');
+    $setu = $this->db->count_all_results();
+
+    $data = [
+        'ciputat' => $ciputat,
+        'ciptim' => $ciptim,
+        'serpong' => $serpong,
+        'serut' => $serut,
+        'ponren' => $ponren,
+        'pamulang' => $pamulang,
+        'setu' => $setu,
+        ];
+
+
+    $this->db->like('jenis_kelamin', 'Pria');
+    $this->db->from('tb_pmk');
+    $pria = $this->db->count_all_results();
+
+    $this->db->like('jenis_kelamin', 'Wanita');
+    $this->db->from('tb_pmk');
+    $wanita = $this->db->count_all_results();
+
+
+    $data = [
+        'ciputat' => $ciputat,
+        'ciptim' => $ciptim,
+        'serpong' => $serpong,
+        'serut' => $serut,
+        'ponren' => $ponren,
+        'pamulang' => $pamulang,
+        'setu' => $setu,
+        'pria' => $pria,
+        'wanita' => $wanita
+    ];
+
     $this->load->model('M_pmk', 'pmk');
     $data['pmks'] = $this->pmk->get_all_pmk();
 

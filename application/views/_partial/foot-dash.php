@@ -2,7 +2,7 @@
    <div class="float-right d-none d-sm-block">
      <b>Version</b> 3.1.0
    </div>
-   <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+   <strong>Copyright &copy; <span id="years"></span> <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
  </footer>
 
  <!-- Control Sidebar -->
@@ -37,12 +37,23 @@
  <!-- Page specific script -->
  <script>
    $(document).ready(function() {
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    document.getElementById("years").innerHTML = new Date().getFullYear();
      $('#example1').DataTable({
        dom: 'Bfrtip',
        buttons: [
          'excelHtml5', 'pdfHtml5', 'csvHtml5', 'copy', 'print',
        ],
-       
+       // paging: true
+
+     });
+
+     $('#data_pmk').DataTable({
+        paging: true,
+        searching: true,
+        responsive: true,
+        autoWidth: false
+
      });
    });
  </script>

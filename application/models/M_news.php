@@ -73,6 +73,17 @@ class M_news extends CI_Model
         $this->db->update('tb_berita');
     }
 
+        public function tolak_data_berita($kode_berita)
+    {
+        $data = [
+            'status_berita' => 'Ditolak'
+        ];
+
+        $this->db->set($data);
+        $this->db->where('kode_berita', $kode_berita);
+        $this->db->update('tb_berita');
+    }
+
     public function get_all_news()
     {
         $this->db->order_by('kode_berita', 'DESC');
