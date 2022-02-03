@@ -13,14 +13,24 @@ class Admin extends CI_Controller
   //   }
   // }
 
-
   public function index()
+  {
+    $this->load->model('M_pmk', 'pmk');
+    $data['pmks'] = $this->pmk->get_all_pmk();
+
+    $this->load->view('_partial/head-dash');
+    $this->load->view('admin-page/admin',$data);
+    $this->load->view('_partial/foot-dash');
+  }
+
+
+  public function pwc_admin()
   {
     $this->load->model('M_pwc', 'pwc');
     $data['PWC'] = $this->pwc->get_all_pwc();
 
     $this->load->view('_partial/head-dash');
-    $this->load->view('admin-page/admin', $data);
+    $this->load->view('admin-page/pwc2021/pwc_admin', $data);
     $this->load->view('_partial/foot-dash');
   }
 

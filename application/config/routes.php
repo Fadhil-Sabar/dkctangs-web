@@ -77,7 +77,8 @@ $route['Failed_GS'] = 'DaftarGelas/failed_gs';
 $route['Login'] = 'Admin/Auth/Auth/masuk';
 $route['Logout'] = 'Admin/Auth/Auth/keluar';
 $route['Forgot-Pass'] = 'Admin/Auth/Auth/lupa_pass';
-$route['Admin'] = "Admin/Admin"; //INI CONTROLLER PWC JUGA
+$route['Admin-Page'] = "Admin/Admin";
+$route['Admin_PWC'] = "Admin/Admin/pwc_admin";
 $route['Admin_Tatil'] = "Admin/Admin/nt_admin";
 $route['Admin_Gelas'] = "Admin/Admin/gs_admin";
 

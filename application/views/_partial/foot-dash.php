@@ -18,6 +18,7 @@
  <!-- Bootstrap 4 -->
  <script src="<?= base_url() ?>dashboard/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
  <!-- DataTables  & Plugins -->
+ <script src="<?= base_url() ?>dashboard/tinymce/js/tinymce/tinymce.js"></script>
  <script src="<?= base_url() ?>dashboard/plugins/datatables/jquery.dataTables.min.js"></script>
  <script src="<?= base_url() ?>dashboard/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
  <script src="<?= base_url() ?>dashboard/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
@@ -32,8 +33,7 @@
  <script src="<?= base_url() ?>dashboard/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
  <!-- AdminLTE App -->
  <script src="<?= base_url() ?>dashboard/dist/js/adminlte.min.js"></script>
- <!-- AdminLTE for demo purposes -->
- <script src="<?= base_url() ?>dashboard/dist/js/demo.js"></script>
+ <script src="https://cdn.tiny.cloud/1/pgnww4dori9fglfcml4mkk7n9xp06tsum1tzs84m67fborgo/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
  <!-- Page specific script -->
  <script>
    $(document).ready(function() {
@@ -41,10 +41,31 @@
        dom: 'Bfrtip',
        buttons: [
          'excelHtml5', 'pdfHtml5', 'csvHtml5', 'copy', 'print',
-       ]
+       ],
+       
      });
    });
  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+        tinymce.init({
+            selector: 'textarea#editor',
+            menubar: false,
+        });
+
+        $('.custom-file input').change(function(e) {
+            $(this).next('.custom-file-label').html(e.target.files[0].name);
+        });
+
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+
+    });
+  </script>
+
  </body>
 
  </html>
