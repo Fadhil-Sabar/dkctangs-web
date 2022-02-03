@@ -75,13 +75,13 @@
                                                   <td>
                                                       <div class="btn-group">
                                                           <a href="<?= base_url('Edit-pmk/' . $p->id); ?>" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
-                                                          <a href="<?= base_url('Delete-pmk/' . $p->id); ?>" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deletePmk">
+                                                          <a href="<?= base_url('Delete-pmk/' . $p->id); ?>" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deletePmk<?= $p->id ?>">
                                                               <i class="fa fa-trash"></i>
                                                           </a>
                                                       </div>
                                                   </td>
                                                   <!-- delete doctor Modal-->
-                                                  <div class="modal fade" id="deletePmk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                  <div class="modal fade" id="deletePmk<?= $p->id ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                       <div class="modal-dialog" role="document">
                                                           <div class="modal-content">
                                                               <div class="modal-header">
@@ -94,7 +94,7 @@
                                                               </div>
                                                               <div class="modal-footer">
                                                                   <button class="btn btn-secondary" type="button" data-dismiss="modal">Kembali</button>
-                                                                  <a href="<?= base_url('Delete-pmk/' . $p->id); ?>" class="btn btn-danger" href="1">Ya</a>
+                                                                  <a href="<?= base_url('Delete-pmk/' . $p->id); ?>" class="btn btn-danger">Ya</a>
                                                               </div>
                                                           </div>
                                                       </div>

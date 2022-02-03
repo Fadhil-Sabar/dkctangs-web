@@ -5,7 +5,9 @@ class M_pmk extends CI_Model
 {
     public function tambah_data_pmk()
     {
+        $this->load->helper('string');
         $data = [
+            'id' => random_string('md5', 32),
             'nama' => $this->input->post('Nama', true),
             'pangkalan' => $this->input->post('Pangkalan', true),
             'tgl_lahir' => $this->input->post('Tanggal_Lahir', true),
@@ -41,11 +43,15 @@ class M_pmk extends CI_Model
 
     public function hapus_data_pmk($id)
     {
-        $this->db->delete('tb_pmk', array('id' => $id));
+        $this->db->set('is_deleted', true);
+        $this->db->where('id', $id);
+        $this->db->update('tb_pmk');
     }
 
     public function get_all_pmk()
     {
+        $this->db->where('is_deleted', false);
+        $this->db->order_by('updated_at');
         return $this->db->get('tb_pmk')->result();
     }
 

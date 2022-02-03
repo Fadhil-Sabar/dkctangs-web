@@ -83,8 +83,8 @@ $route['Admin_Gelas'] = "Admin/Admin/gs_admin";
 
 $route['Admin_Pramuka'] = "Admin/Admin/pmk_admin";
 $route['Add_Pmk'] = "Admin/Process_pmk/tambah_data_pmk";
-$route['Edit-pmk/(:num)'] = "Admin/Process_pmk/Edit_pmk/$1";
-$route['Delete-pmk/(:num)'] = "Admin/Process_pmk/hapus_pmk/$1";
+$route['Edit-pmk/(:any)'] = "Admin/Process_pmk/Edit_pmk/$1";
+$route['Delete-pmk/(:any)'] = "Admin/Process_pmk/hapus_pmk/$1";
 
 // Route news
 $route['News-Page'] = 'Admin/Admin/berita';

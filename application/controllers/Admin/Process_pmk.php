@@ -38,7 +38,7 @@ class Process_Pmk extends CI_Controller
 
     public function Edit_pmk($id)
     {
-        $parse_id = (int) $id;
+        $parse_id = (string) $id;
         $data['title']          = 'Edit';
         $data['active']         = true;
         $data['pmk']      = $this->pmk->get_pmk_by_id($parse_id);
@@ -68,7 +68,7 @@ class Process_Pmk extends CI_Controller
 
     public function hapus_pmk($id)
     {
-        $parse_id = (int) $id;
+        $parse_id = (string)$id;
         $this->pmk->hapus_data_pmk($parse_id);
         $this->session->set_flashdata('msg', 'Data berhasil di hapus!');
         redirect(base_url('Admin_Pramuka'));
