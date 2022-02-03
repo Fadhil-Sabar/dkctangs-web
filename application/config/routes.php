@@ -72,6 +72,7 @@ $route['Daftar_GS'] = 'DaftarGelas/daftar_gs';
 $route['Success_GS/(:num)'] = 'DaftarGelas/success_gs/$1';
 $route['Failed_GS'] = 'DaftarGelas/failed_gs';
 
+$route['DataKegiatan'] = 'Admin/Admin/dataKegiatan';
 
 //ADMIN PAGE DIBAWAH INI 
 $route['Login'] = 'Admin/Auth/Auth/masuk';

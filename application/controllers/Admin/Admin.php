@@ -154,4 +154,27 @@ class Admin extends CI_Controller
     //   return redirect(base_url('Error'));
     // }
   }
-}
+  
+  public function kegiatan()
+  {
+    // Blocking adm klinik
+    // if ($this->session->userdata('level') === '1' || $this->session->userdata('level') === '3') {
+    $this->load->model('M_event', 'event');
+
+    $data['title']   = 'Kegiatan';
+    $data['events'] = $this->event->get_all_kegiatan();
+
+    $this->load->view('_partial/head-dash', $data);
+    $this->load->view('admin-page/pramuka/events', $data);
+    $this->load->view('_partial/foot-dash');
+    // } else {
+    //   return redirect(base_url('Error'));
+    // }
+  }
+
+  public function dataKegiatan()
+  {
+    $this->load->view('_partial/head-dash');
+    $this->load->view('admin-page/kegiatan');
+    $this->load->view('_partial/foot-dash');
+  }
